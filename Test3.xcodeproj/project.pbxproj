@@ -15,6 +15,8 @@
 		1A94F2CA1E800CFD0025E249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A94F2C81E800CFD0025E249 /* LaunchScreen.storyboard */; };
 		1A94F2D51E800CFD0025E249 /* Test3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A94F2D41E800CFD0025E249 /* Test3Tests.swift */; };
 		1A94F2E01E800CFD0025E249 /* Test3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A94F2DF1E800CFD0025E249 /* Test3UITests.swift */; };
+		1A94F2EF1E800D080025E249 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A94F2EE1E800D080025E249 /* MapKit.framework */; };
+		1A94F2F11E8015D10025E249 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A94F2F01E8015D10025E249 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		1A94F2DB1E800CFD0025E249 /* Test3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A94F2DF1E800CFD0025E249 /* Test3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3UITests.swift; sourceTree = "<group>"; };
 		1A94F2E11E800CFD0025E249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A94F2EE1E800D080025E249 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1A94F2F01E8015D10025E249 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1A94F2F21E80282C0025E249 /* Stations.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Stations.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A94F2F11E8015D10025E249 /* CoreLocation.framework in Frameworks */,
+				1A94F2EF1E800D080025E249 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +90,7 @@
 				1A94F2D31E800CFD0025E249 /* Test3Tests */,
 				1A94F2DE1E800CFD0025E249 /* Test3UITests */,
 				1A94F2BA1E800CFC0025E249 /* Products */,
+				1A94F2ED1E800D080025E249 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +109,7 @@
 			children = (
 				1A94F2BC1E800CFD0025E249 /* AppDelegate.swift */,
 				1A94F2BE1E800CFD0025E249 /* ViewController.swift */,
+				1A94F2F21E80282C0025E249 /* Stations.gpx */,
 				1A94F2C01E800CFD0025E249 /* Main.storyboard */,
 				1A94F2C61E800CFD0025E249 /* Assets.xcassets */,
 				1A94F2C81E800CFD0025E249 /* LaunchScreen.storyboard */,
@@ -126,6 +135,15 @@
 				1A94F2E11E800CFD0025E249 /* Info.plist */,
 			);
 			path = Test3UITests;
+			sourceTree = "<group>";
+		};
+		1A94F2ED1E800D080025E249 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A94F2F01E8015D10025E249 /* CoreLocation.framework */,
+				1A94F2EE1E800D080025E249 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +214,13 @@
 				TargetAttributes = {
 					1A94F2B81E800CFC0025E249 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2NLA4DSF26;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					1A94F2CF1E800CFD0025E249 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -416,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2NLA4DSF26;
 				INFOPLIST_FILE = Test3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ChloeHutchings.Test3;
@@ -428,6 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2NLA4DSF26;
 				INFOPLIST_FILE = Test3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ChloeHutchings.Test3;
@@ -509,6 +535,7 @@
 				1A94F2E61E800CFD0025E249 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A94F2E71E800CFD0025E249 /* Build configuration list for PBXNativeTarget "Test3Tests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +544,7 @@
 				1A94F2E91E800CFD0025E249 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A94F2EA1E800CFD0025E249 /* Build configuration list for PBXNativeTarget "Test3UITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +553,7 @@
 				1A94F2EC1E800CFD0025E249 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
