@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Test3
-//
-//  Created by Chloe Hutchings on 20/03/2017.
-//  Copyright © 2017 Chloe Hutchings. All rights reserved.
-//
-
 import UIKit
 import MapKit
 import CoreLocation
@@ -38,9 +30,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    
     override func viewDidLoad() {
-        
         
         super.viewDidLoad()
         
@@ -49,17 +39,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         
-        
-        
-        
-    
         }
-        
-
     
-    
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
