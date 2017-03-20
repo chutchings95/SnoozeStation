@@ -25,6 +25,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         print(location.speed)
         
+       // print(location.distance(from: location))
+        
         self.mapView.showsUserLocation = true 
         
         
