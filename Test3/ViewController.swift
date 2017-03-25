@@ -2,10 +2,14 @@ import UIKit
 import MapKit
 import CoreLocation
 
+
 class ViewController: UIViewController, CLLocationManagerDelegate {
+    
+    
     
     @IBOutlet var mapView: MKMapView!
     
+    var showingAlert = false
     
     let manager = CLLocationManager()
     
@@ -24,15 +28,38 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         mapView.setRegion(region, animated: true)
         
         print(location.speed)
+        print(location.coordinate)
+        print(location.timestamp)
         
        // print(location.distance(from: location))
         
-        self.mapView.showsUserLocation = true 
-        
+        self.mapView.showsUserLocation = true
         
     }
     
+    var alertController:UIAlertController?
+
+    
     override func viewDidLoad() {
+        
+       
+        
+       // if "user"  == "Destination" {
+            let overlays = mapView.overlays
+            mapView.removeOverlays(overlays)
+            
+            if !showingAlert {
+                showingAlert = true;                                                                             let refreshAlert = UIAlertController(title: "Wake Up", message: "You Are Nearly At Your Destination", preferredStyle: UIAlertControllerStyle.alert)
+                refreshAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
+                    print("Handle Ok logic here")
+                    self.showingAlert = false
+                }))
+                present(refreshAlert, animated: true, completion: nil)
+                
+                
+            }
+            
+        }
         
         super.viewDidLoad()
         
@@ -43,14 +70,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         
         
-        }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
         
-    }
-
-    
-    
-    
+        
 }
+

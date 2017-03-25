@@ -17,6 +17,7 @@
 		1A94F2E01E800CFD0025E249 /* Test3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A94F2DF1E800CFD0025E249 /* Test3UITests.swift */; };
 		1A94F2EF1E800D080025E249 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A94F2EE1E800D080025E249 /* MapKit.framework */; };
 		1A94F2F11E8015D10025E249 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A94F2F01E8015D10025E249 /* CoreLocation.framework */; };
+		1ADB17D11E828E9C002C7F2B /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB17D01E828E9C002C7F2B /* extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		1A94F2EE1E800D080025E249 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1A94F2F01E8015D10025E249 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1A94F2F21E80282C0025E249 /* Stations.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Stations.gpx; sourceTree = "<group>"; };
+		1ADB17D01E828E9C002C7F2B /* extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				1A94F2BC1E800CFD0025E249 /* AppDelegate.swift */,
 				1A94F2BE1E800CFD0025E249 /* ViewController.swift */,
+				1ADB17D01E828E9C002C7F2B /* extension.swift */,
 				1A94F2F21E80282C0025E249 /* Stations.gpx */,
 				1A94F2C01E800CFD0025E249 /* Main.storyboard */,
 				1A94F2C61E800CFD0025E249 /* Assets.xcassets */,
@@ -289,6 +292,7 @@
 				1A94F2C51E800CFD0025E249 /* Test3.xcdatamodeld in Sources */,
 				1A94F2BF1E800CFD0025E249 /* ViewController.swift in Sources */,
 				1A94F2BD1E800CFD0025E249 /* AppDelegate.swift in Sources */,
+				1ADB17D11E828E9C002C7F2B /* extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

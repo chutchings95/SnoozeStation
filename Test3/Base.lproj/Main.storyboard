@@ -22,29 +22,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcP-Zh-fMe">
-                                <rect key="frame" x="0.0" y="73" width="375" height="594"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgt-gZ-Vqp">
-                                <rect key="frame" x="0.0" y="20" width="375" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pcP-Zh-fMe" firstAttribute="top" secondItem="vgt-gZ-Vqp" secondAttribute="bottom" constant="32" id="B9F-3a-f0o"/>
-                            <constraint firstItem="vgt-gZ-Vqp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="FTn-dE-QuE"/>
-                            <constraint firstItem="vgt-gZ-Vqp" firstAttribute="leading" secondItem="pcP-Zh-fMe" secondAttribute="leading" id="L3S-3z-Y6P"/>
-                            <constraint firstAttribute="trailing" secondItem="vgt-gZ-Vqp" secondAttribute="trailing" id="UlY-Xc-pNw"/>
-                            <constraint firstItem="pcP-Zh-fMe" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Zqe-Cl-K7j"/>
-                            <constraint firstItem="vgt-gZ-Vqp" firstAttribute="trailing" secondItem="pcP-Zh-fMe" secondAttribute="trailing" id="cSR-7J-rg3"/>
-                            <constraint firstItem="vgt-gZ-Vqp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vEh-Xp-s3N"/>
+                            <constraint firstItem="pcP-Zh-fMe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bx2-38-KHs"/>
+                            <constraint firstItem="pcP-Zh-fMe" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="grT-4C-AZB"/>
+                            <constraint firstAttribute="trailing" secondItem="pcP-Zh-fMe" secondAttribute="trailing" id="pBI-nB-Oup"/>
+                            <constraint firstItem="pcP-Zh-fMe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sMP-qA-wXF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="pcP-Zh-fMe" id="QVE-M1-QIx"/>
-                        <outlet property="theLabel" destination="vgt-gZ-Vqp" id="CKa-uM-5zy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
