@@ -41,7 +41,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
        
         
        // if "user"  == "Destination" {
@@ -49,28 +49,31 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             mapView.removeOverlays(overlays)
             
             if !showingAlert {
-                showingAlert = true;                                                                             let refreshAlert = UIAlertController(title: "Wake Up", message: "You Are Nearly At Your Destination", preferredStyle: UIAlertControllerStyle.alert)
-                refreshAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
+                showingAlert = true
+                let refreshAlert = UIAlertController(title: "Wake Up", message: "You Are Nearly At Your Destination", preferredStyle: UIAlertControllerStyle.alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
                     print("Handle Ok logic here")
                     self.showingAlert = false
-                }))
+                })
+                refreshAlert.addAction(action)
+                
                 present(refreshAlert, animated: true, completion: nil)
                 
                 
             }
-            
-        }
-        
-        super.viewDidLoad()
         
         manager.delegate = self
+        manager.allowsBackgroundLocationUpdates = true
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         
+            
+        }
         
         
         
-        
+
+
 }
 
