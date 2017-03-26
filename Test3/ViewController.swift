@@ -27,9 +27,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         mapView.setRegion(region, animated: true)
         
-        print(location.speed)
+        // print(location.speed)
         print(location.coordinate)
-        print(location.timestamp)
+        // print(location.timestamp)
+        
+        let destination = CLLocation(latitude: 50.727104, longitude: -1.864576)
+        
+        if location.distance(from: destination) < 100 {
+            print("arrived")
+            showAlert()
+        }
         
        // print(location.distance(from: location))
         
@@ -47,32 +54,35 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
        // if "user"  == "Destination" {
             let overlays = mapView.overlays
             mapView.removeOverlays(overlays)
-            
-            if !showingAlert {
-                showingAlert = true
-                let refreshAlert = UIAlertController(title: "Wake Up", message: "You Are Nearly At Your Destination", preferredStyle: UIAlertControllerStyle.alert)
-                let action = UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
-                    print("Handle Ok logic here")
-                    self.showingAlert = false
-                })
-                refreshAlert.addAction(action)
-                
-                present(refreshAlert, animated: true, completion: nil)
-                
-                
-            }
+        
+        // showAlert()
         
         manager.delegate = self
-        manager.allowsBackgroundLocationUpdates = true
+        // manager.allowsBackgroundLocationUpdates = true
         manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestWhenInUseAuthorization()
+        manager.requestAlwaysAuthorization()
         manager.startUpdatingLocation()
         
             
         }
-        
-        
-        
+    
+    
+    func showAlert() {
+
+        if !showingAlert {
+            showingAlert = true
+            let refreshAlert = UIAlertController(title: "Wake Up", message: "You Are Nearly At Your Destination", preferredStyle: UIAlertControllerStyle.alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
+                print("Handle Ok logic here")
+                self.showingAlert = false
+            })
+            refreshAlert.addAction(action)
+            
+            present(refreshAlert, animated: true, completion: nil)
+        }
+    }
+    
+    
 
 
 }
