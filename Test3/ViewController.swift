@@ -5,8 +5,6 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
-    
-    
     @IBOutlet var mapView: MKMapView!
     
     var showingAlert = false
