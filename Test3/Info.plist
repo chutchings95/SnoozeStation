@@ -36,7 +36,7 @@
 		<string>MKDirectionsModeTrain</string>
 	</array>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Use Location</string>
+	<string>I need your location to wake you up!</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
