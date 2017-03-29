@@ -1,9 +1,0 @@
-import Foundation
-
-class stationLocation {
-
-
-
-
-
-}
