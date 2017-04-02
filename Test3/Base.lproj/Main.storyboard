@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,21 +22,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWh-8r-Vgt">
-                                <rect key="frame" x="171" y="544" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWh-8r-Vgt">
+                                <rect key="frame" x="129" y="392" width="117" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Set Alarm">
+                                    <color key="titleColor" red="0.98499258179593341" green="0.99565498501619298" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="MA0-LP-HBh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Typing Your Station" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMC-vU-Kfo">
+                                <rect key="frame" x="0.0" y="289" width="375" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.20551527755469012" green="1" blue="0.48055043401497544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZCZ-eC-hNO">
+                                <rect key="frame" x="69" y="318" width="236" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.3809684327411168" green="0.3809684327411168" blue="0.3809684327411168" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZCZ-eC-hNO" firstAttribute="leading" secondItem="icE-9d-PB2" secondAttribute="leadingMargin" constant="53" id="5vz-I3-Ufj"/>
+                            <constraint firstAttribute="trailing" secondItem="XMC-vU-Kfo" secondAttribute="trailing" id="8mJ-Wy-eg1"/>
+                            <constraint firstItem="ZCZ-eC-hNO" firstAttribute="top" secondItem="XMC-vU-Kfo" secondAttribute="bottom" constant="5" id="JF8-ia-1Md"/>
+                            <constraint firstItem="XMC-vU-Kfo" firstAttribute="leading" secondItem="icE-9d-PB2" secondAttribute="leading" id="PwX-tB-tUj"/>
+                            <constraint firstItem="XMC-vU-Kfo" firstAttribute="centerX" secondItem="ZCZ-eC-hNO" secondAttribute="centerX" id="RQW-DZ-BMc"/>
+                            <constraint firstItem="DWh-8r-Vgt" firstAttribute="top" secondItem="ZCZ-eC-hNO" secondAttribute="bottom" constant="44" id="VGc-Ey-nUP"/>
+                            <constraint firstItem="ZCZ-eC-hNO" firstAttribute="centerX" secondItem="DWh-8r-Vgt" secondAttribute="centerX" id="oBo-Wj-8G5"/>
+                            <constraint firstItem="ZCZ-eC-hNO" firstAttribute="centerY" secondItem="icE-9d-PB2" secondAttribute="centerY" id="sq0-kG-zCL"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fny-V0-cCP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="57" y="116"/>
+            <point key="canvasLocation" x="56.799999999999997" y="115.59220389805098"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

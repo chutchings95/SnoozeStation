@@ -1,11 +1,3 @@
-//
-//  SetupViewController.swift
-//  Test3
-//
-//  Created by Chloe Hutchings on 30/03/2017.
-//  Copyright © 2017 Chloe Hutchings. All rights reserved.
-//
-
 import UIKit
 import SwiftyJSON
 
@@ -47,8 +39,10 @@ class SetupViewController: UIViewController {
         
         // Print some stuff to make sure it works 🌚
         print(stations.count)
-        print(stations[20].name)
-        print(stations[20].coordinates)
+        print(stations[50].name)
+        print(stations[50].coordinates)
+       
+        
         
     }
     
