@@ -1,14 +1,36 @@
 <?xml version="1.0"?>
 <gpx version="1.1" creator="Xcode">
     
+    <wpt lat="50.725132" lon="-2.019409">
+        <name>Hamworthy Station</name>
+        <time>2014-09-24T14:55:00Z</time>
+    </wpt>
+    
+    <wpt lat="50.719448" lon="-1.983180">
+        <name>Poole Station</name>
+        <time>2014-09-24T14:55:30Z</time>
+    </wpt>
+    
+    <wpt lat="50.722855" lon="-1.948145">
+        <name>Parkstone Station</name>
+        <time>2014-09-24T14:56:00Z</time>
+    </wpt>
+    
+    
     <wpt lat="50.726848" lon="-1.919621">
         <name>Branksome Station</name>
-        <time>2014-09-24T14:55:30Z</time>
+        <time>2014-09-24T14:56:30Z</time>
     </wpt>
     
     <wpt lat="50.727104" lon="-1.864576">
         <name>Bournemouth Station</name>
-        <time>2014-09-24T14:55:50Z</time>
+        <time>2014-09-24T14:57:00Z</time>
+    </wpt>
+    
+    
+    <wpt lat="50.730995" lon="-1.825165">
+        <name>Pokesdown Station</name>
+        <time>2014-09-24T14:57:30Z</time>
     </wpt>
     
 </gpx>

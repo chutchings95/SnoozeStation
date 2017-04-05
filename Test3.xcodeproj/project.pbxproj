@@ -131,6 +131,7 @@
 			children = (
 				1A94F2BC1E800CFD0025E249 /* AppDelegate.swift */,
 				1A94F2BE1E800CFD0025E249 /* ViewController.swift */,
+				1AF8BA061E8D6A0600F7C943 /* SetupViewController.swift */,
 				1A94F2F21E80282C0025E249 /* Stations.gpx */,
 				1A94F2C01E800CFD0025E249 /* Main.storyboard */,
 				1A94F2C61E800CFD0025E249 /* Assets.xcassets */,
@@ -138,7 +139,6 @@
 				1A94F2C81E800CFD0025E249 /* LaunchScreen.storyboard */,
 				1A94F2CB1E800CFD0025E249 /* Info.plist */,
 				1A94F2C31E800CFD0025E249 /* Test3.xcdatamodeld */,
-				1AF8BA061E8D6A0600F7C943 /* SetupViewController.swift */,
 				1AF8BA0A1E8D6F2C00F7C943 /* Station.swift */,
 			);
 			path = Test3;

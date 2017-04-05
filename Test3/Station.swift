@@ -22,4 +22,9 @@ class Station {
         coordinates = CLLocation(latitude: CLLocationDegrees(coordinateArray[0].floatValue), longitude: CLLocationDegrees(coordinateArray[1].floatValue))
     }
     
+    init(name: String, lat: Float, lon: Float) {
+        self.name = name
+        self.coordinates = CLLocation(latitude: CLLocationDegrees(lat), longitude: CLLocationDegrees(lon))
+    }
+    
 }
