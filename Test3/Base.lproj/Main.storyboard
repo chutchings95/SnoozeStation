@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="-473" y="86"/>
         </scene>
-        <!--View Controller-->
+        <!--Favourites View Controller-->
         <scene sceneID="Ash-XY-8U4">
             <objects>
-                <viewController id="hB8-5E-UHn" sceneMemberID="viewController">
+                <viewController title="Favourites View Controller" id="hB8-5E-UHn" customClass="FavouritesViewController" customModule="Test3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FDA-JS-MWg"/>
                         <viewControllerLayoutGuide type="bottom" id="fWZ-Y2-FaA"/>
