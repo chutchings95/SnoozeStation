@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A94F2BD1E800CFD0025E249 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A94F2BC1E800CFD0025E249 /* AppDelegate.swift */; };
-		1A94F2BF1E800CFD0025E249 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A94F2BE1E800CFD0025E249 /* ViewController.swift */; };
+		1A94F2BF1E800CFD0025E249 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A94F2BE1E800CFD0025E249 /* MapViewController.swift */; };
 		1A94F2C21E800CFD0025E249 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A94F2C01E800CFD0025E249 /* Main.storyboard */; };
 		1A94F2C51E800CFD0025E249 /* Test3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A94F2C31E800CFD0025E249 /* Test3.xcdatamodeld */; };
 		1A94F2C71E800CFD0025E249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A94F2C61E800CFD0025E249 /* Assets.xcassets */; };
@@ -46,7 +46,7 @@
 		06610F4235E9A5857BC8B1E8 /* Pods-Test3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test3.release.xcconfig"; path = "Pods/Target Support Files/Pods-Test3/Pods-Test3.release.xcconfig"; sourceTree = "<group>"; };
 		1A94F2B91E800CFC0025E249 /* Test3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A94F2BC1E800CFD0025E249 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A94F2BE1E800CFD0025E249 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
+		1A94F2BE1E800CFD0025E249 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		1A94F2C11E800CFD0025E249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A94F2C41E800CFD0025E249 /* Test3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Test3.xcdatamodel; sourceTree = "<group>"; };
 		1A94F2C61E800CFD0025E249 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				1A94F2BC1E800CFD0025E249 /* AppDelegate.swift */,
-				1A94F2BE1E800CFD0025E249 /* ViewController.swift */,
+				1A94F2BE1E800CFD0025E249 /* MapViewController.swift */,
 				1AF8BA061E8D6A0600F7C943 /* SetupViewController.swift */,
 				1A94F2F21E80282C0025E249 /* Stations.gpx */,
 				1A94F2C01E800CFD0025E249 /* Main.storyboard */,
@@ -481,7 +481,7 @@
 				1AF8BA071E8D6A0600F7C943 /* SetupViewController.swift in Sources */,
 				1AF8BA0B1E8D6F2C00F7C943 /* Station.swift in Sources */,
 				1A94F2C51E800CFD0025E249 /* Test3.xcdatamodeld in Sources */,
-				1A94F2BF1E800CFD0025E249 /* ViewController.swift in Sources */,
+				1A94F2BF1E800CFD0025E249 /* MapViewController.swift in Sources */,
 				1A94F2BD1E800CFD0025E249 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

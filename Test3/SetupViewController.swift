@@ -6,9 +6,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     @IBOutlet var pickerView: UIPickerView!
     
-    
-    
-  
+
     @IBAction func alarmButton(_ sender: Any) {
     }
     
@@ -88,7 +86,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toMapVC" {
             
-            let mapVC = segue.destination as! ViewController
+            let mapVC = segue.destination as! MapViewController
             mapVC.destination = pickerStations[currentSelectedStation].coordinates
             
         }
