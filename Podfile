@@ -6,7 +6,8 @@ target 'Test3' do
   use_frameworks!
 
   # Pods for Test3
-  pod 'SwiftyJSON'  
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
 
   target 'Test3Tests' do
     inherit! :search_paths
