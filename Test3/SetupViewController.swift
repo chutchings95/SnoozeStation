@@ -5,6 +5,7 @@ import Alamofire
 class SetupViewController: UIViewController {
     
     
+    
     @IBOutlet var pickerView: UIPickerView!
     
 
@@ -24,13 +25,11 @@ class SetupViewController: UIViewController {
             //check the success bool
             self.pickerView.reloadAllComponents()
         }
+        
     }
+    
 
-    func didType() {
-        
-        var stations = StationManager.shared.searchStations("Bour")
-        
-    }
+    
     
 }
 
@@ -42,6 +41,18 @@ extension SetupViewController: UIPickerViewDelegate {
         currentSelectedStation = row
     }
     
+}
+
+
+
+
+    
+    
+    func didType() {
+        
+        var stations = StationManager.shared.searchStations("Bour")
+        
+        
 }
 
 
@@ -60,8 +71,6 @@ extension SetupViewController: UIPickerViewDataSource {
     }
 
 }
-
-
 
 
 

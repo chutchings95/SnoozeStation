@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vGK-2D-hAH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L8d-qC-qzp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,42 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="YGM-Ad-EfY">
+            <objects>
+                <viewController id="L8d-qC-qzp" customClass="StartViewController" customModule="Test3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F2X-4a-nPx"/>
+                        <viewControllerLayoutGuide type="bottom" id="y2A-rd-2hE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b42-1x-zQr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPC-gQ-bKP">
+                                <rect key="frame" x="0.0" y="329" width="375" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Favourites"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyv-El-1me">
+                                <rect key="frame" x="0.0" y="221" width="375" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Search A Station"/>
+                                <connections>
+                                    <action selector="selectStationButton:" destination="L8d-qC-qzp" eventType="touchUpInside" id="8Wx-fp-72G"/>
+                                    <segue destination="vGK-2D-hAH" kind="show" id="XpR-CQ-x7R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QaL-7t-T6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-911.20000000000005" y="115.59220389805098"/>
+        </scene>
         <!--Setup View Controller-->
         <scene sceneID="bWn-ny-AvA">
             <objects>
@@ -32,8 +68,11 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toMapVC" id="MA0-LP-HBh"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEr-3U-FFU">
+                                <rect key="frame" x="0.0" y="144" width="375" height="216"/>
+                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose A Station" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ray-1a-R8V">
-                                <rect key="frame" x="0.0" y="87" width="375" height="21"/>
+                                <rect key="frame" x="0.0" y="115" width="375" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="2wZ-dP-Os5"/>
                                 </constraints>
@@ -41,13 +80,10 @@
                                 <color key="textColor" red="0.37155845761299133" green="0.76082032918930054" blue="0.44867599010467529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEr-3U-FFU">
-                                <rect key="frame" x="0.0" y="144" width="375" height="216"/>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.3809684327411168" green="0.3809684327411168" blue="0.3809684327411168" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ray-1a-R8V" firstAttribute="top" secondItem="cd7-AF-n0c" secondAttribute="bottom" constant="67" id="3vT-a1-5vk"/>
+                            <constraint firstItem="ray-1a-R8V" firstAttribute="top" secondItem="cd7-AF-n0c" secondAttribute="bottom" constant="95" id="3vT-a1-5vk"/>
                             <constraint firstItem="ray-1a-R8V" firstAttribute="centerX" secondItem="DWh-8r-Vgt" secondAttribute="centerX" id="EvW-nS-vXY"/>
                             <constraint firstAttribute="trailing" secondItem="ray-1a-R8V" secondAttribute="trailing" id="Kci-dj-0aH"/>
                             <constraint firstItem="ray-1a-R8V" firstAttribute="leading" secondItem="icE-9d-PB2" secondAttribute="leading" id="NAg-ga-GQY"/>
@@ -59,9 +95,18 @@
                     </view>
                     <connections>
                         <outlet property="pickerView" destination="LEr-3U-FFU" id="afX-vl-o2c"/>
+                        <outlet property="searchDisplayController" destination="uSH-nz-u8H" id="0Oy-aZ-T4S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fny-V0-cCP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="uSH-nz-u8H">
+                    <connections>
+                        <outlet property="delegate" destination="vGK-2D-hAH" id="OIy-tV-ynW"/>
+                        <outlet property="searchContentsController" destination="vGK-2D-hAH" id="B65-ip-8In"/>
+                        <outlet property="searchResultsDataSource" destination="vGK-2D-hAH" id="WdC-ud-Y7q"/>
+                        <outlet property="searchResultsDelegate" destination="vGK-2D-hAH" id="nB3-tv-k8y"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-169" y="116"/>
         </scene>

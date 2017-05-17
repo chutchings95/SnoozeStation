@@ -24,7 +24,7 @@ class StationManager {
     
     
     
-    func searchStations(_ search: String) -> [Station] {
+   func searchStations(_ search: String) -> [Station] {
         var stations = [Station]()
         
         
