@@ -131,14 +131,28 @@
                                 <rect key="frame" x="0.0" y="233" width="375" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Set Alarm"/>
+                                <state key="normal" title="Set Alarm">
+                                    <color key="titleColor" red="0.34876745939254761" green="0.6624453067779541" blue="0.43275934457778931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="setAlarmButton:" destination="3mE-c5-iol" eventType="touchUpInside" id="RZA-l0-1IW"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="k6z-Fr-Jp2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tsu-zj-Mla">
+                                <rect key="frame" x="0.0" y="16" width="98" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="alertBackButton:" destination="3mE-c5-iol" eventType="touchUpInside" id="5oW-cL-oRE"/>
+                                    <segue destination="vGK-2D-hAH" kind="show" id="C6q-2i-flZ"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.38035297393798828" green="0.38042038679122925" blue="0.38033866882324219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H0j-xG-gMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -250,5 +264,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="T6G-aE-77b"/>
+        <segue reference="C6q-2i-flZ"/>
     </inferredMetricsTieBreakers>
 </document>
