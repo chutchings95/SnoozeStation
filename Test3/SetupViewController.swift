@@ -8,6 +8,8 @@ class SetupViewController: UIViewController {
     
     @IBOutlet var pickerView: UIPickerView!
     
+    @IBAction func stationBackButton(_ sender: Any) {
+    }
 
     @IBAction func alarmButton(_ sender: Any) {
     }

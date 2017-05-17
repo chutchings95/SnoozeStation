@@ -1,5 +1,5 @@
 //
-//  StartViewController.swift
+//  FavouritesViewController.swift
 //  Test3
 //
 //  Created by Chloe Hutchings on 17/05/2017.
@@ -8,17 +8,12 @@
 
 import UIKit
 
-class StartViewController: UIViewController {
+class FavouritesViewController: UIViewController {
 
-   
-    @IBAction func favouritesButton(_ sender: Any) {
-    }
-    @IBAction func selectStationButton(_ sender: Any) {
+    @IBAction func favouritesBackButton(_ sender: Any) {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
 
         // Do any additional setup after loading the view.
     }
