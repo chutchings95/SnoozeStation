@@ -12,6 +12,8 @@ class AlertViewController: UIViewController {
 
     @IBAction func setAlarmButton(_ sender: Any) {
     }
+    @IBAction func alertBackButton(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
