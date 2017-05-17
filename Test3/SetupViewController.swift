@@ -11,7 +11,8 @@ class SetupViewController: UIViewController {
     @IBAction func stationBackButton(_ sender: Any) {
     }
 
-    @IBAction func alarmButton(_ sender: Any) {
+    
+    @IBAction func customiseAlertButton(_ sender: Any) {
     }
     
     // Sets up an empty array of Stations
