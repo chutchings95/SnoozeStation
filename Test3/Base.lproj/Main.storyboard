@@ -249,11 +249,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="89S-NL-hvb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="89S-NL-hvb">
+                                <rect key="frame" x="0.0" y="40" width="375" height="586"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dks-vH-Q06">
+                                <rect key="frame" x="16" y="2" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="mapBackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IzW-U0-hXS"/>
+                                    <segue destination="3mE-c5-iol" kind="show" id="373-YE-ha9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPj-k1-hPe">
+                                <rect key="frame" x="0.0" y="629" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Cancel Alert">
+                                    <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelAlertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zev-tG-sJh"/>
+                                    <segue destination="L8d-qC-qzp" kind="show" id="pUq-aL-8hj"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.38035297393798828" green="0.38042038679122925" blue="0.38033866882324219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="89S-NL-hvb" secondAttribute="trailing" id="FLQ-UB-skv"/>
                             <constraint firstItem="89S-NL-hvb" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="V9w-fz-gac"/>
@@ -267,11 +291,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="116"/>
+            <point key="canvasLocation" x="861.60000000000002" y="115.59220389805098"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="T6G-aE-77b"/>
+        <segue reference="pUq-aL-8hj"/>
+        <segue reference="373-YE-ha9"/>
         <segue reference="XpR-CQ-x7R"/>
     </inferredMetricsTieBreakers>
 </document>
