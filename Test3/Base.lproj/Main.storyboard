@@ -165,12 +165,20 @@
                                     <constraint firstAttribute="height" constant="77" id="Kh7-PE-Lws"/>
                                     <constraint firstAttribute="width" constant="140" id="PQX-cn-wjH"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="3mE-c5-iol" id="BDc-Ig-eRd"/>
+                                    <outlet property="delegate" destination="3mE-c5-iol" id="ghp-EB-m5L"/>
+                                </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjf-4N-AZQ">
                                 <rect key="frame" x="219" y="255" width="156" height="85"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="NnS-uB-3ff"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="3mE-c5-iol" id="3U2-na-iXM"/>
+                                    <outlet property="delegate" destination="3mE-c5-iol" id="o2l-Tt-rFk"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tsu-zj-Mla">
                                 <rect key="frame" x="0.0" y="0.0" width="51" height="45"/>

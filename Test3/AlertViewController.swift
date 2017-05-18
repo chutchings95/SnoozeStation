@@ -1,41 +1,80 @@
-//
-//  AlertViewController.swift
-//  Test3
-//
-//  Created by Chloe Hutchings on 17/05/2017.
-//  Copyright © 2017 Chloe Hutchings. All rights reserved.
-//
-
 import UIKit
 
-class AlertViewController: UIViewController {
+class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    
+    
 
-    @IBOutlet var musicPickerView: UIPickerView!
+    @IBOutlet weak var musicPickerView: UIPickerView!
+    
     @IBOutlet var distancePickerView: UIPickerView!
+    
+ 
     @IBAction func setAlarmButton(_ sender: Any) {
     }
     @IBAction func alertBackButton(_ sender: Any) {
+        
     }
+    
+    var sound = ["Chimes","Ripples","Waves"]
+    var distance = ["2km","5km"]
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        var countrows : Int = sound.count
+        if pickerView == distancePickerView {
+            
+            countrows = self.distance.count
+        }
+        
+        return countrows
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == musicPickerView {
+            
+            let titleRow = sound[row]
+            
+            return titleRow
+            
+        }
+            
+        else if pickerView == distancePickerView{
+            let titleRow = distance[row]
+            
+            return titleRow
+        }
+        
+        return ""
+    }
+    
+    
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    
+        }
+            
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
 
-}
+
+
+
+
+
+
+
+
