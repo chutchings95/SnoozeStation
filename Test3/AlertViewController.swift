@@ -6,10 +6,8 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
 
     @IBOutlet weak var musicPickerView: UIPickerView!
-    
     @IBOutlet var distancePickerView: UIPickerView!
     
- 
     @IBAction func setAlarmButton(_ sender: Any) {
     }
     @IBAction func alertBackButton(_ sender: Any) {
