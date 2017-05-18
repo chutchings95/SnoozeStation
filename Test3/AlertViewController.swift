@@ -16,7 +16,7 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     
     
-    var sound = ["Chimes","Ripples","Waves"]
+    var sound = ["Chimes","Classic","Magic"]
     var distance = ["2km","5km"]
     
     

@@ -83,6 +83,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         AudioServicesPlaySystemSound(SystemSoundID(4095))
         
         
+        
+        
+        
+        
         if !showingAlert {
             showingAlert = true
             let refreshAlert = UIAlertController(title: "Stop Snoozing!", message: "You Are Nearly At Your Destination", preferredStyle: UIAlertControllerStyle.alert)
