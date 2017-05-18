@@ -387,7 +387,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="distanceLabel" destination="nHN-eu-eBy" id="XuA-sh-C6A"/>
+                        <outlet property="distanceLabel" destination="nHN-eu-eBy" id="BoL-5d-1g5"/>
                         <outlet property="mapView" destination="89S-NL-hvb" id="7kO-7K-fyy"/>
                     </connections>
                 </viewController>
@@ -397,8 +397,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EuM-sT-vlM"/>
-        <segue reference="rfu-cr-b3T"/>
+        <segue reference="pUq-aL-8hj"/>
+        <segue reference="373-YE-ha9"/>
         <segue reference="C6q-2i-flZ"/>
     </inferredMetricsTieBreakers>
 </document>

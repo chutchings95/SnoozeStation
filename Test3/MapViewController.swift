@@ -11,9 +11,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func cancelAlertButton(_ sender: Any) {
     }
     
-    @IBOutlet var distanceLabel: UILabel!
     @IBOutlet var mapView: MKMapView!
     
+    @IBOutlet var distanceLabel: UILabel!
 
     var showingAlert = false 
     

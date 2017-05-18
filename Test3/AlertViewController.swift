@@ -14,12 +14,19 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
     }
     
+    
+    
     var sound = ["Chimes","Ripples","Waves"]
     var distance = ["2km","5km"]
+    
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
+    
+    
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         var countrows : Int = sound.count
         if pickerView == distancePickerView {
@@ -30,18 +37,18 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         return countrows
     }
     
+    
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == musicPickerView {
             
             let titleRow = sound[row]
-            
             return titleRow
             
         }
             
-        else if pickerView == distancePickerView{
+            else if pickerView == distancePickerView{
             let titleRow = distance[row]
-            
             return titleRow
         }
         
@@ -53,7 +60,9 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
     
         }
-            
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,12 +76,3 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
 
 
     }
-
-
-
-
-
-
-
-
-
