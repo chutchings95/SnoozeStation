@@ -1,11 +1,3 @@
-//
-//  FavouritesViewController.swift
-//  Test3
-//
-//  Created by Chloe Hutchings on 17/05/2017.
-//  Copyright © 2017 Chloe Hutchings. All rights reserved.
-//
-
 import UIKit
 
 class FavouritesViewController: UIViewController {
