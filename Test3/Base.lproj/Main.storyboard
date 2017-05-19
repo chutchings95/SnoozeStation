@@ -291,6 +291,7 @@
                     <connections>
                         <outlet property="pickerView" destination="LEr-3U-FFU" id="afX-vl-o2c"/>
                         <outlet property="searchDisplayController" destination="uSH-nz-u8H" id="0Oy-aZ-T4S"/>
+                        <outlet property="searchStation" destination="55g-6S-UK8" id="MlW-Ha-3kB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fny-V0-cCP" userLabel="First Responder" sceneMemberID="firstResponder"/>

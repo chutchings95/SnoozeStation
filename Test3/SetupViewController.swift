@@ -10,6 +10,7 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
     @IBAction func stationBackButton(_ sender: Any) {
     }
 
+    @IBOutlet var searchStation: UITextField!
     
     @IBAction func customiseAlertButton(_ sender: Any) {
     }
