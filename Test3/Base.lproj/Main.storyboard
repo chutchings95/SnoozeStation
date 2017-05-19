@@ -266,6 +266,16 @@
                                     <segue destination="L8d-qC-qzp" kind="show" id="T6G-aE-77b"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="55g-6S-UK8">
+                                <rect key="frame" x="58" y="106" width="259" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vGK-2D-hAH" id="tJS-LX-jiY"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.3809684327411168" green="0.3809684327411168" blue="0.3809684327411168" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -293,7 +303,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="81" y="161"/>
+            <point key="canvasLocation" x="80.799999999999997" y="160.56971514242881"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -397,8 +407,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pUq-aL-8hj"/>
-        <segue reference="373-YE-ha9"/>
+        <segue reference="T6G-aE-77b"/>
         <segue reference="C6q-2i-flZ"/>
+        <segue reference="rfu-cr-b3T"/>
     </inferredMetricsTieBreakers>
 </document>
