@@ -2,8 +2,7 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
-class SetupViewController: UIViewController {
-    
+class SetupViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet var pickerView: UIPickerView!
