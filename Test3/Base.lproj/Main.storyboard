@@ -247,15 +247,12 @@
                                     <segue destination="3mE-c5-iol" kind="show" id="rfu-cr-b3T"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEr-3U-FFU">
-                                <rect key="frame" x="0.0" y="144" width="375" height="216"/>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzV-pj-ckq">
                                 <rect key="frame" x="0.0" y="0.0" width="49" height="46"/>
                                 <color key="backgroundColor" red="0.40491777950000002" green="0.91037436549999995" blue="0.47168805549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="49" id="EFr-15-cjb"/>
-                                    <constraint firstAttribute="height" constant="46" id="S6X-EV-n0z"/>
+                                    <constraint firstAttribute="height" constant="46" id="T0l-px-bNy"/>
+                                    <constraint firstAttribute="width" constant="49" id="qJg-e0-e3x"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="&lt;">
@@ -266,9 +263,8 @@
                                     <segue destination="L8d-qC-qzp" kind="show" id="T6G-aE-77b"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="55g-6S-UK8">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="55g-6S-UK8">
                                 <rect key="frame" x="58" y="106" width="259" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -276,16 +272,22 @@
                                     <outlet property="delegate" destination="vGK-2D-hAH" id="tJS-LX-jiY"/>
                                 </connections>
                             </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEr-3U-FFU">
+                                <rect key="frame" x="0.0" y="168" width="375" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.3809684327411168" green="0.3809684327411168" blue="0.3809684327411168" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="LEr-3U-FFU" firstAttribute="centerX" secondItem="DWh-8r-Vgt" secondAttribute="centerX" id="4fe-O8-qmv"/>
-                            <constraint firstItem="LEr-3U-FFU" firstAttribute="top" secondItem="bzV-pj-ckq" secondAttribute="bottom" constant="98" id="5RV-V3-4Ld"/>
-                            <constraint firstItem="DWh-8r-Vgt" firstAttribute="top" secondItem="LEr-3U-FFU" secondAttribute="bottom" constant="32" id="76F-O3-nHm"/>
-                            <constraint firstItem="bzV-pj-ckq" firstAttribute="top" secondItem="icE-9d-PB2" secondAttribute="top" id="EWa-fN-8oR"/>
-                            <constraint firstItem="bzV-pj-ckq" firstAttribute="leading" secondItem="icE-9d-PB2" secondAttribute="leading" id="UuK-XD-qsi"/>
-                            <constraint firstItem="bzV-pj-ckq" firstAttribute="leading" secondItem="LEr-3U-FFU" secondAttribute="leading" id="eoy-rf-0rw"/>
-                            <constraint firstAttribute="trailing" secondItem="LEr-3U-FFU" secondAttribute="trailing" id="pJh-N4-Zgc"/>
+                            <constraint firstAttribute="trailing" secondItem="LEr-3U-FFU" secondAttribute="trailing" id="8KO-LA-MGX"/>
+                            <constraint firstItem="55g-6S-UK8" firstAttribute="top" secondItem="cd7-AF-n0c" secondAttribute="bottom" constant="86" id="AVt-6B-wvO"/>
+                            <constraint firstItem="DWh-8r-Vgt" firstAttribute="top" secondItem="LEr-3U-FFU" secondAttribute="bottom" constant="8" symbolic="YES" id="AvY-gN-QQL"/>
+                            <constraint firstItem="bzV-pj-ckq" firstAttribute="leading" secondItem="LEr-3U-FFU" secondAttribute="leading" id="EDp-qH-1w5"/>
+                            <constraint firstItem="LEr-3U-FFU" firstAttribute="centerX" secondItem="DWh-8r-Vgt" secondAttribute="centerX" id="GBh-3s-2Ip"/>
+                            <constraint firstItem="55g-6S-UK8" firstAttribute="leading" secondItem="icE-9d-PB2" secondAttribute="leadingMargin" constant="42" id="I2J-5h-a9j"/>
+                            <constraint firstItem="bzV-pj-ckq" firstAttribute="leading" secondItem="icE-9d-PB2" secondAttribute="leading" id="NHV-bM-3sa"/>
+                            <constraint firstItem="bzV-pj-ckq" firstAttribute="top" secondItem="icE-9d-PB2" secondAttribute="top" id="i3h-ZB-eSZ"/>
+                            <constraint firstItem="55g-6S-UK8" firstAttribute="centerX" secondItem="LEr-3U-FFU" secondAttribute="centerX" id="xEg-jg-UWH"/>
+                            <constraint firstItem="LEr-3U-FFU" firstAttribute="top" secondItem="55g-6S-UK8" secondAttribute="bottom" constant="32" id="yMj-OQ-3tL"/>
                         </constraints>
                     </view>
                     <connections>
