@@ -7,13 +7,17 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var pickerView: UIPickerView!
     
+    @IBOutlet var searchStation: UITextField!
+    
     @IBAction func stationBackButton(_ sender: Any) {
     }
 
-    @IBOutlet var searchStation: UITextField!
+    
     
     @IBAction func customiseAlertButton(_ sender: Any) {
     }
+    
+    
     
     // Sets up an empty array of Stations
     var currentSelectedStation = 0
@@ -71,6 +75,12 @@ extension SetupViewController: UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return StationManager.shared.stations[row].name
+    }
+    
+    // Catpure the picker view selection
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // This method is triggered whenever the user makes a change to the picker selection.
+        // The parameter named row and component represents what was selected.
     }
 
 }

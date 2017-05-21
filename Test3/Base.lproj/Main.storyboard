@@ -44,7 +44,7 @@
                                 </state>
                                 <connections>
                                     <action selector="selectStationButton:" destination="L8d-qC-qzp" eventType="touchUpInside" id="8Wx-fp-72G"/>
-                                    <segue destination="vGK-2D-hAH" kind="show" id="XpR-CQ-x7R"/>
+                                    <segue destination="vGK-2D-hAH" kind="show" id="LKp-Dv-KQH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -193,7 +193,6 @@
                                 </state>
                                 <connections>
                                     <action selector="alertBackButton:" destination="3mE-c5-iol" eventType="touchUpInside" id="5oW-cL-oRE"/>
-                                    <segue destination="vGK-2D-hAH" kind="show" id="C6q-2i-flZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -222,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H0j-xG-gMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="980" y="161"/>
+            <point key="canvasLocation" x="1588" y="161"/>
         </scene>
         <!--Setup View Controller-->
         <scene sceneID="bWn-ny-AvA">
@@ -236,23 +235,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWh-8r-Vgt">
-                                <rect key="frame" x="92" y="392" width="191" height="45"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Customise Alert">
-                                    <color key="titleColor" red="0.98499258179593341" green="0.99565498501619298" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="customiseAlertButton:" destination="vGK-2D-hAH" eventType="touchUpInside" id="z8c-3Y-gDm"/>
-                                    <segue destination="3mE-c5-iol" kind="show" id="rfu-cr-b3T"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzV-pj-ckq">
                                 <rect key="frame" x="0.0" y="0.0" width="49" height="46"/>
                                 <color key="backgroundColor" red="0.40491777950000002" green="0.91037436549999995" blue="0.47168805549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="T0l-px-bNy"/>
-                                    <constraint firstAttribute="width" constant="49" id="qJg-e0-e3x"/>
+                                    <constraint firstAttribute="width" constant="49" id="QbT-aH-2FY"/>
+                                    <constraint firstAttribute="height" constant="46" id="iuI-HN-Aa8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="&lt;">
@@ -263,37 +251,60 @@
                                     <segue destination="L8d-qC-qzp" kind="show" id="T6G-aE-77b"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="55g-6S-UK8">
-                                <rect key="frame" x="58" y="106" width="259" height="30"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEr-3U-FFU">
+                                <rect key="frame" x="0.0" y="196" width="375" height="227"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vGK-2D-hAH" id="sMI-wO-DmM"/>
+                                    <outlet property="delegate" destination="vGK-2D-hAH" id="Faa-Kz-Byr"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWh-8r-Vgt">
+                                <rect key="frame" x="92" y="449" width="191" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="JcD-62-yeO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Customise Alert">
+                                    <color key="titleColor" red="0.98499258179593341" green="0.99565498501619298" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="customiseAlertButton:" destination="vGK-2D-hAH" eventType="touchUpInside" id="z8c-3Y-gDm"/>
+                                    <segue destination="3mE-c5-iol" kind="show" id="rfu-cr-b3T"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0xz-Zf-9Pc">
+                                <rect key="frame" x="85" y="114" width="205" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0DS-R2-APo"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="vGK-2D-hAH" id="tJS-LX-jiY"/>
+                                    <outlet property="delegate" destination="vGK-2D-hAH" id="qsF-ow-dTX"/>
                                 </connections>
                             </textField>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEr-3U-FFU">
-                                <rect key="frame" x="0.0" y="168" width="375" height="216"/>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.3809684327411168" green="0.3809684327411168" blue="0.3809684327411168" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="LEr-3U-FFU" secondAttribute="trailing" id="8KO-LA-MGX"/>
-                            <constraint firstItem="55g-6S-UK8" firstAttribute="top" secondItem="cd7-AF-n0c" secondAttribute="bottom" constant="86" id="AVt-6B-wvO"/>
-                            <constraint firstItem="DWh-8r-Vgt" firstAttribute="top" secondItem="LEr-3U-FFU" secondAttribute="bottom" constant="8" symbolic="YES" id="AvY-gN-QQL"/>
-                            <constraint firstItem="bzV-pj-ckq" firstAttribute="leading" secondItem="LEr-3U-FFU" secondAttribute="leading" id="EDp-qH-1w5"/>
-                            <constraint firstItem="LEr-3U-FFU" firstAttribute="centerX" secondItem="DWh-8r-Vgt" secondAttribute="centerX" id="GBh-3s-2Ip"/>
-                            <constraint firstItem="55g-6S-UK8" firstAttribute="leading" secondItem="icE-9d-PB2" secondAttribute="leadingMargin" constant="42" id="I2J-5h-a9j"/>
-                            <constraint firstItem="bzV-pj-ckq" firstAttribute="leading" secondItem="icE-9d-PB2" secondAttribute="leading" id="NHV-bM-3sa"/>
-                            <constraint firstItem="bzV-pj-ckq" firstAttribute="top" secondItem="icE-9d-PB2" secondAttribute="top" id="i3h-ZB-eSZ"/>
-                            <constraint firstItem="55g-6S-UK8" firstAttribute="centerX" secondItem="LEr-3U-FFU" secondAttribute="centerX" id="xEg-jg-UWH"/>
-                            <constraint firstItem="LEr-3U-FFU" firstAttribute="top" secondItem="55g-6S-UK8" secondAttribute="bottom" constant="32" id="yMj-OQ-3tL"/>
+                            <constraint firstItem="bzV-pj-ckq" firstAttribute="leading" secondItem="icE-9d-PB2" secondAttribute="leading" id="5wL-Xu-Xm8"/>
+                            <constraint firstItem="bzV-pj-ckq" firstAttribute="leading" secondItem="LEr-3U-FFU" secondAttribute="leading" id="GVW-nK-a9E"/>
+                            <constraint firstItem="LEr-3U-FFU" firstAttribute="top" secondItem="0xz-Zf-9Pc" secondAttribute="bottom" constant="52" id="JHg-AY-pss"/>
+                            <constraint firstItem="bzV-pj-ckq" firstAttribute="top" secondItem="icE-9d-PB2" secondAttribute="top" id="T0O-kP-SmM"/>
+                            <constraint firstItem="0xz-Zf-9Pc" firstAttribute="top" secondItem="cd7-AF-n0c" secondAttribute="bottom" constant="94" id="du1-ED-YgX"/>
+                            <constraint firstItem="brL-lp-zig" firstAttribute="top" secondItem="DWh-8r-Vgt" secondAttribute="bottom" constant="173" id="dwu-Df-4we"/>
+                            <constraint firstItem="0xz-Zf-9Pc" firstAttribute="leading" secondItem="icE-9d-PB2" secondAttribute="leadingMargin" constant="69" id="fcP-Ne-NQp"/>
+                            <constraint firstItem="LEr-3U-FFU" firstAttribute="centerX" secondItem="DWh-8r-Vgt" secondAttribute="centerX" id="jXX-zg-w0f"/>
+                            <constraint firstAttribute="trailing" secondItem="LEr-3U-FFU" secondAttribute="trailing" id="nYs-Pl-ro1"/>
+                            <constraint firstItem="DWh-8r-Vgt" firstAttribute="top" secondItem="LEr-3U-FFU" secondAttribute="bottom" constant="26" id="qBB-GQ-vSZ"/>
+                            <constraint firstItem="0xz-Zf-9Pc" firstAttribute="centerX" secondItem="LEr-3U-FFU" secondAttribute="centerX" id="xb2-0B-CoE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="r51-nT-JVW"/>
                     <connections>
                         <outlet property="pickerView" destination="LEr-3U-FFU" id="afX-vl-o2c"/>
                         <outlet property="searchDisplayController" destination="uSH-nz-u8H" id="0Oy-aZ-T4S"/>
-                        <outlet property="searchStation" destination="55g-6S-UK8" id="MlW-Ha-3kB"/>
+                        <outlet property="searchStation" destination="0xz-Zf-9Pc" id="wkP-FB-L8u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fny-V0-cCP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -306,7 +317,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="80.799999999999997" y="160.56971514242881"/>
+            <point key="canvasLocation" x="416.80000000000001" y="160.56971514242881"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -406,12 +417,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1822" y="161"/>
+            <point key="canvasLocation" x="2760.8000000000002" y="160.56971514242881"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="T6G-aE-77b"/>
-        <segue reference="C6q-2i-flZ"/>
         <segue reference="rfu-cr-b3T"/>
     </inferredMetricsTieBreakers>
 </document>
