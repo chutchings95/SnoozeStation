@@ -8,6 +8,10 @@ class StationManager {
     
     var stations = [Station]()
     
+    var stationNames = [String]()
+    
+    var chosenStation: Station?
+    
     private init() {}
     
     func updateStation(with jsonData: JSON) {
@@ -17,25 +21,27 @@ class StationManager {
         // For each station...
         for jsonStation in array {
             // Initiate a new Station, and add it to the array from up the top
-            stations.append(Station(json: jsonStation))
+            let station = Station(json: jsonStation)
+            stations.append(station)
+            stationNames.append(station.name)
+            
         }
         
+        print(stations)
+        
     }
     
-    
-    
-    func searchStations(_ search: String) -> [Station] {
-        var results = [Station]()
 
-        
-        
-        return stations
+    
+    func setStation(station: Station) {
+        chosenStation = station
     }
     
     
     
-    func loadSations(completionHandler:@escaping (Bool) -> ()) {
-        Alamofire.request("https://raw.githubusercontent.com/chutchings95/SnoozeStation/master/Test3/nearest.json?token=AJgWbjGgAOKPrWVG-pALOjKVFhewqvY0ks5ZIgDLwA%3D%3D").response { response in
+    func loadStations(completionHandler:@escaping (Bool) -> ()) {
+        Alamofire.request("https://raw.githubusercontent.com/chutchings95/SnoozeStation/master/Test3/nearest.json?token=AJgWbnHqlfbaF1M4Q26vu65Q3hX02K1aks5ZMAFbwA%3D%3D").response { response in
+            
             guard let data = response.data else {
                 completionHandler(false)
                 return

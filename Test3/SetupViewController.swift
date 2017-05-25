@@ -2,22 +2,16 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
-class SetupViewController: UIViewController, UITextFieldDelegate {
+class SetupViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    
-    @IBOutlet var pickerView: UIPickerView!
-    
-    @IBOutlet var searchStation: UITextField!
     
     @IBAction func stationBackButton(_ sender: Any) {
     }
-
     
+    @IBOutlet var textField: UITextField!
+    @IBOutlet var tableView: UITableView!
     
-    @IBAction func customiseAlertButton(_ sender: Any) {
-    }
-    
-    
+    var autoComplete: [Station] = []
     
     // Sets up an empty array of Stations
     var currentSelectedStation = 0
@@ -25,65 +19,94 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pickerView.delegate = self
-        pickerView.dataSource = self
+        textField.delegate = self
+        tableView.delegate = self
+        tableView.register(StationCell.self, forCellReuseIdentifier: "cell")
         
-        StationManager.shared.loadSations { success in
+        StationManager.shared.loadStations { success in
             //check the success bool
-            self.pickerView.reloadAllComponents()
+            print(success)
         }
         
     }
     
-
     
-    
-}
-
-
-
-extension SetupViewController: UIPickerViewDelegate {
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        currentSelectedStation = row
-    }
-    
-}
-
-
-
-
-    
-    
-    func didType() {
-        
-        var stations = StationManager.shared.searchStations("Bour")
-        
-        
-}
-
-
-extension SetupViewController: UIPickerViewDataSource {
-
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return StationManager.shared.stations.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return autoComplete.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return StationManager.shared.stations[row].name
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! StationCell
+        
+        let index = indexPath.row as Int
+        
+        cell.textLabel!.text = autoComplete[index].name
+        
+        return cell
     }
     
-    // Catpure the picker view selection
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // This method is triggered whenever the user makes a change to the picker selection.
-        // The parameter named row and component represents what was selected.
+    
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let substring = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        
+        searchAutocompleteEntriesWithSubstring(substring)
+        
+        return true
+    }
+    
+    func searchAutocompleteEntriesWithSubstring(_ substring: String) {
+        autoComplete.removeAll(keepingCapacity: false)
+        
+        for key in StationManager.shared.stations {
+            
+            let myString:NSString! = key.name as NSString
+            
+            let substringRange :NSRange! = myString.range(of: substring)
+            
+            if (substringRange.location  == 0) {
+                autoComplete.append(key)
+            }
+        }
+        
+        tableView.reloadData()
+    }
+    
+    
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let selectedCell: StationCell = tableView.cellForRow(at: indexPath)! as! StationCell
+        
+        textField.text = selectedCell.textLabel!.text!
+        StationManager.shared.chosenStation = selectedCell.station
+        
+    }
+    
+    
+}
+
+class StationCell: UITableViewCell {
+    var station: Station?
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
 }
+
+
 
 
 
