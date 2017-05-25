@@ -47,10 +47,12 @@ class SetupViewController: UIViewController, UITextFieldDelegate, UITableViewDel
         
         cell.textLabel!.text = autoComplete[index].name
         
+        
         return cell
     }
     
     
+
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
@@ -105,10 +107,5 @@ class StationCell: UITableViewCell {
     }
 
 }
-
-
-
-
-
 
 
