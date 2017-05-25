@@ -31,6 +31,8 @@ class SetupViewController: UIViewController, UITextFieldDelegate, UITableViewDel
     }
     
     
+    
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -81,7 +83,14 @@ class SetupViewController: UIViewController, UITextFieldDelegate, UITableViewDel
     }
     
     
-    
+   // func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
+        //if such cell exists and destination controller (the one to show) exists too..
+       // if let _ = tableView.cellForRow(at: indexPath as IndexPath), let destinationAlertViewController = navigationController?.storyboard?.instantiateViewController(withIdentifier: "AlertViewController") as? AlertViewController{
+          
+            //Then just push the controller into the view hierarchy
+          //  navigationController?.pushViewController(destinationAlertViewController, animated: true)
+      //  }
+  //  }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -89,9 +98,16 @@ class SetupViewController: UIViewController, UITextFieldDelegate, UITableViewDel
         
         textField.text = selectedCell.textLabel!.text!
         StationManager.shared.chosenStation = selectedCell.station
-        
+        performSegue(withIdentifier: "segue", sender: self)
     }
     
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue" {
+            // Setup new view controller
+        }
+    }
     
 }
 
