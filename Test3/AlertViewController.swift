@@ -19,7 +19,8 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var sound = ["Chimes","Classic","Magic"]
     var distance = ["2km","5km"]
     
-    
+   
+   
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -55,14 +56,15 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         return ""
     }
     
+
     
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
     
         }
     
-    
-    
+   
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()

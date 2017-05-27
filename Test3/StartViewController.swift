@@ -6,11 +6,12 @@ class StartViewController: UIViewController {
     @IBAction func favouritesButton(_ sender: Any) {
     }
     @IBAction func selectStationButton(_ sender: Any) {
+        
     }
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
 
         // Do any additional setup after loading the view.
     }

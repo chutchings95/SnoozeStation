@@ -8,8 +8,11 @@ class SetupViewController: UIViewController, UITextFieldDelegate, UITableViewDel
     @IBAction func stationBackButton(_ sender: Any) {
     }
    
+
     @IBOutlet var textField: UITextField!
     @IBOutlet var tableView: UITableView!
+    
+    
     
     var autoComplete: [Station] = []
     
@@ -31,7 +34,7 @@ class SetupViewController: UIViewController, UITextFieldDelegate, UITableViewDel
     }
     
     
-    
+   
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
