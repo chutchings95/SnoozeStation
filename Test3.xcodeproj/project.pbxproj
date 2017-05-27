@@ -11,6 +11,9 @@
 		1A4D7D341ECC753700D707D8 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D7D331ECC753700D707D8 /* FavouritesViewController.swift */; };
 		1A4D7D361ECC8EFE00D707D8 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D7D351ECC8EFE00D707D8 /* AlertViewController.swift */; };
 		1A4D7D7D1ED9CFA600D707D8 /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D7D7C1ED9CFA600D707D8 /* BounceButton.swift */; };
+		1A4D7D861EDA26A600D707D8 /* Chimes.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A4D7D831EDA26A600D707D8 /* Chimes.wav */; };
+		1A4D7D871EDA26A600D707D8 /* Classic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A4D7D841EDA26A600D707D8 /* Classic.wav */; };
+		1A4D7D881EDA26A600D707D8 /* Magic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A4D7D851EDA26A600D707D8 /* Magic.wav */; };
 		1A90E1031EC9008500934EF4 /* StationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90E1021EC9008500934EF4 /* StationManager.swift */; };
 		1A94F2BD1E800CFD0025E249 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A94F2BC1E800CFD0025E249 /* AppDelegate.swift */; };
 		1A94F2BF1E800CFD0025E249 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A94F2BE1E800CFD0025E249 /* MapViewController.swift */; };
@@ -53,6 +56,9 @@
 		1A4D7D331ECC753700D707D8 /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		1A4D7D351ECC8EFE00D707D8 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		1A4D7D7C1ED9CFA600D707D8 /* BounceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BounceButton.swift; path = Test3/BounceButton.swift; sourceTree = "<group>"; };
+		1A4D7D831EDA26A600D707D8 /* Chimes.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Chimes.wav; sourceTree = "<group>"; };
+		1A4D7D841EDA26A600D707D8 /* Classic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Classic.wav; sourceTree = "<group>"; };
+		1A4D7D851EDA26A600D707D8 /* Magic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Magic.wav; sourceTree = "<group>"; };
 		1A90E1021EC9008500934EF4 /* StationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManager.swift; sourceTree = "<group>"; };
 		1A94F2B91E800CFC0025E249 /* Test3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A94F2BC1E800CFD0025E249 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,9 +128,20 @@
 			name = CustomControls;
 			sourceTree = "<group>";
 		};
+		1A4D7D821EDA267D00D707D8 /* Alarm Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				1A4D7D831EDA26A600D707D8 /* Chimes.wav */,
+				1A4D7D841EDA26A600D707D8 /* Classic.wav */,
+				1A4D7D851EDA26A600D707D8 /* Magic.wav */,
+			);
+			name = "Alarm Sounds";
+			sourceTree = "<group>";
+		};
 		1A94F2B01E800CFC0025E249 = {
 			isa = PBXGroup;
 			children = (
+				1A4D7D821EDA267D00D707D8 /* Alarm Sounds */,
 				1A4D7D7F1ED9D40D00D707D8 /* CustomControls */,
 				1A94F2BB1E800CFC0025E249 /* Test3 */,
 				1A94F2D31E800CFD0025E249 /* Test3Tests */,
@@ -338,6 +355,9 @@
 				1A94F2CA1E800CFD0025E249 /* LaunchScreen.storyboard in Resources */,
 				1A94F2C71E800CFD0025E249 /* Assets.xcassets in Resources */,
 				1AF8BA091E8D6D0A00F7C943 /* nearest.json in Resources */,
+				1A4D7D871EDA26A600D707D8 /* Classic.wav in Resources */,
+				1A4D7D881EDA26A600D707D8 /* Magic.wav in Resources */,
+				1A4D7D861EDA26A600D707D8 /* Chimes.wav in Resources */,
 				1A94F2C21E800CFD0025E249 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

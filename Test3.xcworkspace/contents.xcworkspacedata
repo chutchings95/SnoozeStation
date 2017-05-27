@@ -3,6 +3,10 @@
    version = "1.0">
    <Group
       location = "container:"
+      name = "Alarm Sounds">
+   </Group>
+   <Group
+      location = "container:"
       name = "CustomControls">
    </Group>
    <FileRef
