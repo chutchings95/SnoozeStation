@@ -27,7 +27,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient-0" translatesAutoresizingMaskIntoConstraints="NO" id="Mwg-Ob-Br2">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyv-El-1me">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyv-El-1me" customClass="BounceButton" customModule="Test3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="227" width="375" height="12"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="29"/>
                                 <state key="normal" title="Find My Station">
@@ -38,7 +38,7 @@
                                     <segue destination="vGK-2D-hAH" kind="show" id="ToL-qa-Jv3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPC-gQ-bKP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPC-gQ-bKP" customClass="BounceButton" customModule="Test3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="285" width="375" height="97"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="29"/>
                                 <state key="normal" title="My Favourites">
@@ -160,7 +160,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient-0" translatesAutoresizingMaskIntoConstraints="NO" id="IeG-AC-aZR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRt-B6-Zus">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRt-B6-Zus" customClass="BounceButton" customModule="Test3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="528" width="375" height="47"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="29"/>
                                 <state key="normal" title="Set Alarm">
@@ -295,6 +295,15 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aQ4-yf-QWy" id="3X3-Hg-f1x">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qra-XB-hHr">
+                                                    <rect key="frame" x="311" y="9" width="22" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="addFavButton:" destination="vGK-2D-hAH" eventType="touchUpInside" id="luQ-Jo-Cdn"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="3mE-c5-iol" kind="show" identifier="segue" id="emg-dc-ZSQ"/>
@@ -384,7 +393,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="89S-NL-hvb">
                                 <rect key="frame" x="0.0" y="221" width="375" height="446"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPj-k1-hPe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPj-k1-hPe" customClass="BounceButton" customModule="Test3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="183" width="375" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="GIh-gh-878"/>
@@ -476,8 +485,8 @@
         <image name="Gradient-0" width="1890" height="1417"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="T6G-aE-77b"/>
-        <segue reference="ToL-qa-Jv3"/>
-        <segue reference="emg-dc-ZSQ"/>
+        <segue reference="pUq-aL-8hj"/>
+        <segue reference="373-YE-ha9"/>
+        <segue reference="h9a-PH-ypu"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,6 +8,9 @@ class SetupViewController: UIViewController, UITextFieldDelegate, UITableViewDel
     @IBAction func stationBackButton(_ sender: Any) {
     }
    
+    @IBAction func addFavButton(_ sender: UIButton) {
+        
+    }
 
     @IBOutlet var textField: UITextField!
     @IBOutlet var tableView: UITableView!

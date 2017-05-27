@@ -8,6 +8,10 @@ class StationManager {
     
     var stations = [Station]()
     
+    // var favouriteStations = [Station]()
+    
+   // StationManager.shared.favouriteStations.append(station)
+    
     var stationNames = [String]()
     
     var chosenStation: Station?
@@ -31,7 +35,7 @@ class StationManager {
         
     }
     
-
+    
     
     func setStation(station: Station) {
         chosenStation = station

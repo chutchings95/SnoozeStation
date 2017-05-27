@@ -10,6 +10,7 @@
 		1A4D7D321ECC729100D707D8 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D7D311ECC729000D707D8 /* StartViewController.swift */; };
 		1A4D7D341ECC753700D707D8 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D7D331ECC753700D707D8 /* FavouritesViewController.swift */; };
 		1A4D7D361ECC8EFE00D707D8 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D7D351ECC8EFE00D707D8 /* AlertViewController.swift */; };
+		1A4D7D7D1ED9CFA600D707D8 /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D7D7C1ED9CFA600D707D8 /* BounceButton.swift */; };
 		1A90E1031EC9008500934EF4 /* StationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90E1021EC9008500934EF4 /* StationManager.swift */; };
 		1A94F2BD1E800CFD0025E249 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A94F2BC1E800CFD0025E249 /* AppDelegate.swift */; };
 		1A94F2BF1E800CFD0025E249 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A94F2BE1E800CFD0025E249 /* MapViewController.swift */; };
@@ -51,6 +52,7 @@
 		1A4D7D311ECC729000D707D8 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		1A4D7D331ECC753700D707D8 /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		1A4D7D351ECC8EFE00D707D8 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		1A4D7D7C1ED9CFA600D707D8 /* BounceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
 		1A90E1021EC9008500934EF4 /* StationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationManager.swift; sourceTree = "<group>"; };
 		1A94F2B91E800CFC0025E249 /* Test3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A94F2BC1E800CFD0025E249 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				1A94F2BC1E800CFD0025E249 /* AppDelegate.swift */,
 				1A90E1021EC9008500934EF4 /* StationManager.swift */,
 				1A4D7D311ECC729000D707D8 /* StartViewController.swift */,
+				1A4D7D7C1ED9CFA600D707D8 /* BounceButton.swift */,
 				1A4D7D331ECC753700D707D8 /* FavouritesViewController.swift */,
 				1AF8BA061E8D6A0600F7C943 /* SetupViewController.swift */,
 				1A4D7D351ECC8EFE00D707D8 /* AlertViewController.swift */,
@@ -491,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A4D7D341ECC753700D707D8 /* FavouritesViewController.swift in Sources */,
+				1A4D7D7D1ED9CFA600D707D8 /* BounceButton.swift in Sources */,
 				1AF8BA071E8D6A0600F7C943 /* SetupViewController.swift in Sources */,
 				1A4D7D321ECC729100D707D8 /* StartViewController.swift in Sources */,
 				1AF8BA0B1E8D6F2C00F7C943 /* Station.swift in Sources */,
