@@ -115,7 +115,7 @@
                                     <action selector="favouritesBackButton:" destination="da1-6a-MNh" eventType="touchUpInside" id="KTQ-zf-nIR"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rYP-b8-Jzj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rYP-b8-Jzj">
                                 <rect key="frame" x="0.0" y="139" width="375" height="528"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -141,6 +141,8 @@
                             <constraint firstAttribute="trailing" secondItem="qMj-rA-Ptc" secondAttribute="trailing" id="Plc-UC-bB3"/>
                             <constraint firstItem="Qe7-Ah-VoR" firstAttribute="top" secondItem="OzM-Xe-iwb" secondAttribute="topMargin" constant="8" id="vQW-cW-kvW"/>
                             <constraint firstItem="qMj-rA-Ptc" firstAttribute="leading" secondItem="Qe7-Ah-VoR" secondAttribute="trailing" constant="-49" id="wIH-Jb-IiK"/>
+                            <constraint firstItem="rYP-b8-Jzj" firstAttribute="leading" secondItem="Qe7-Ah-VoR" secondAttribute="leading" id="yBh-fR-4BV"/>
+                            <constraint firstItem="rYP-b8-Jzj" firstAttribute="top" secondItem="URi-5f-hDR" secondAttribute="bottom" constant="75" id="yZi-fZ-jRx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Favourite Stations" id="5oz-Yw-E39"/>
@@ -149,7 +151,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1092" y="919"/>
+            <point key="canvasLocation" x="1201" y="919"/>
         </scene>
         <!--Customise Alert-->
         <scene sceneID="fiy-bo-kEh">
@@ -327,7 +329,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1092" y="160"/>
+            <point key="canvasLocation" x="1201" y="160"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -459,6 +461,6 @@
         <image name="line" width="1890" height="1417"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0yq-t9-6MJ"/>
+        <segue reference="peu-Ea-dCG"/>
     </inferredMetricsTieBreakers>
 </document>
