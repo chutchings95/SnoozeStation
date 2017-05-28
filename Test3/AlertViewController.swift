@@ -70,7 +70,7 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        print(StationManager.shared.chosenStation?.name)
+        //print(StationManager.shared.chosenStation?.name)
         
     }
     

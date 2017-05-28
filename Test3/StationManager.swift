@@ -7,16 +7,15 @@ class StationManager {
     static let shared = StationManager()
     
     var stations = [Station]()
+    var favourites = [String]()
     
-    // var favouriteStations = [Station]()
-    
-   // StationManager.shared.favouriteStations.append(station)
-    
-    var stationNames = [String]()
-    
-    var chosenStation: Station?
-    
-    private init() {}
+    private init() {
+        
+        if let favourites = UserDefaults.standard.value(forKey: "Favourites") as? [String] {
+            self.favourites = favourites
+        }
+        
+    }
     
     func updateStation(with jsonData: JSON) {
         stations.removeAll()
@@ -27,20 +26,9 @@ class StationManager {
             // Initiate a new Station, and add it to the array from up the top
             let station = Station(json: jsonStation)
             stations.append(station)
-            stationNames.append(station.name)
-            
         }
         
-        print(stations)
-        
     }
-    
-    
-    
-    func setStation(station: Station) {
-        chosenStation = station
-    }
-    
     
     
     func loadStations(completionHandler:@escaping (Bool) -> ()) {
@@ -59,6 +47,22 @@ class StationManager {
             
         }
     }
+    
+    func toggleFavourite(_ station: Station) {
+        
+        if isFavourite(station) {
+            favourites.remove(at: favourites.index(of: station.code)!)
+        } else {
+            favourites.append(station.code)
+        }
+        print(favourites)
+        UserDefaults.standard.setValue(favourites, forKey: "Favourites")
+    }
+    
+    func isFavourite(_ station: Station) -> Bool {
+        return favourites.contains(station.code) ? true : false
+    }
+    
     
 }
     

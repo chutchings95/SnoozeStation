@@ -2,15 +2,8 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
-class SetupViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
+class SetupViewController: UIViewController, UITextFieldDelegate {
     
-    
-    @IBAction func stationBackButton(_ sender: Any) {
-    }
-   
-    @IBAction func addFavButton(_ sender: UIButton) {
-        
-    }
 
     @IBOutlet var textField: UITextField!
     @IBOutlet var tableView: UITableView!
@@ -27,107 +20,83 @@ class SetupViewController: UIViewController, UITextFieldDelegate, UITableViewDel
         
         textField.delegate = self
         tableView.delegate = self
-        tableView.register(StationCell.self, forCellReuseIdentifier: "cell")
         
+        tableView.register(UINib(nibName: "StationCell", bundle: nil), forCellReuseIdentifier: "cell")
+    
         StationManager.shared.loadStations { success in
-            //check the success bool
+            self.tableView.reloadData()
             print(success)
         }
         
     }
+
     
-    
-   
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return autoComplete.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! StationCell
-        
-        let index = indexPath.row as Int
-        
-        cell.textLabel!.text = autoComplete[index].name
-        
-        
-        return cell
-    }
-    
-    
 
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        let substring = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        let substring = textField.text!
         
-        searchAutocompleteEntriesWithSubstring(substring)
+        search(substring)
         
         return true
     }
     
-    func searchAutocompleteEntriesWithSubstring(_ substring: String) {
+    
+    
+    func search(_ search: String) {
+        
         autoComplete.removeAll(keepingCapacity: false)
         
-        for key in StationManager.shared.stations {
-            
-            let myString:NSString! = key.name as NSString
-            
-            let substringRange :NSRange! = myString.range(of: substring)
-            
-            if (substringRange.location  == 0) {
-                autoComplete.append(key)
+        for station in StationManager.shared.stations {
+            if station.name.lowercased().range(of: search.lowercased()) != nil {
+                autoComplete.append(station)
             }
         }
         
         tableView.reloadData()
     }
-    
-    
-   // func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
-        //if such cell exists and destination controller (the one to show) exists too..
-       // if let _ = tableView.cellForRow(at: indexPath as IndexPath), let destinationAlertViewController = navigationController?.storyboard?.instantiateViewController(withIdentifier: "AlertViewController") as? AlertViewController{
-          
-            //Then just push the controller into the view hierarchy
-          //  navigationController?.pushViewController(destinationAlertViewController, animated: true)
-      //  }
-  //  }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let selectedCell: StationCell = tableView.cellForRow(at: indexPath)! as! StationCell
-        
-        textField.text = selectedCell.textLabel!.text!
-        StationManager.shared.chosenStation = selectedCell.station
-        performSegue(withIdentifier: "segue", sender: self)
-    }
-    
-    
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segue" {
+        if segue.identifier == "detail" {
             // Setup new view controller
         }
     }
     
 }
 
-class StationCell: UITableViewCell {
-    var station: Station?
-    
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 
+
+extension SetupViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return autoComplete.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! StationCell
+        let station = autoComplete[indexPath.row]
+        cell.station = station
+        
+        return cell
+    }
+    
 }
+
+
+
+extension SetupViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "detail", sender: self)
+    }
+    
+}
+
 
 
