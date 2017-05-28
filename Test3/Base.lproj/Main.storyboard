@@ -330,17 +330,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qra-XB-hHr">
-                                                    <rect key="frame" x="311" y="9" width="22" height="22"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qra-XB-hHr">
+                                                    <rect key="frame" x="339" y="10" width="22" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
                                                         <action selector="addFavButton:" destination="vGK-2D-hAH" eventType="touchUpInside" id="luQ-Jo-Cdn"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="qra-XB-hHr" secondAttribute="trailing" constant="34" id="0oB-Pu-yin"/>
-                                                <constraint firstItem="qra-XB-hHr" firstAttribute="top" secondItem="3X3-Hg-f1x" secondAttribute="topMargin" constant="1" id="1iS-xU-yPG"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="3mE-c5-iol" kind="modal" identifier="segue" modalTransitionStyle="crossDissolve" id="emg-dc-ZSQ"/>
