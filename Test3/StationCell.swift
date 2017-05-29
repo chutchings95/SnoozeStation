@@ -18,11 +18,11 @@ class StationCell: UITableViewCell {
         if StationManager.shared.isFavourite(station) {
             titleLable.alpha = 1.0
             // Set image to Filled In
-            // favButton.setImage(#imageLiteral(resourceName: "Gradient-0"), for: .normal)
+             favButton.setImage(#imageLiteral(resourceName: "FilledHeart"), for: .normal)
         } else {
-            titleLable.alpha = 0.2
+            titleLable.alpha = 1.0
             // Set image to Outline
-            // favButton.setImage(#imageLiteral(resourceName: "Gradient-0"), for: .normal)
+             favButton.setImage(#imageLiteral(resourceName: "FadedHeart"), for: .normal)
         }
     }
     

@@ -21,9 +21,9 @@ class StartViewController: UIViewController {
         StnBtn.center.x = self.view.frame.width + 30
         favBtn.center.x = self.view.frame.height + 30
         
-        UIView.animate(withDuration: 4.0, delay: 00, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
+        UIView.animate(withDuration: 1.0, delay: 00, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .allowAnimatedContent, animations: {
             
-//            self.StnBtn.center.y = self.view.frame.width / 2
+            self.StnBtn.center.y = self.view.frame.width / 2
             self.favBtn.center.y = self.view.frame.height / 2
         
             }, completion: nil)
