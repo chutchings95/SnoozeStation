@@ -50,6 +50,7 @@ class StationManager {
     
     func toggleFavourite(_ station: Station) {
         
+        
         if isFavourite(station) {
             favourites.remove(at: favourites.index(of: station.code)!)
         } else {

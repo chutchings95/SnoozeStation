@@ -11,6 +11,7 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
     
     
     var autoComplete: [Station] = []
+    var selectedStation: Station?
     
     // Sets up an empty array of Stations
     var currentSelectedStation = 0
@@ -20,6 +21,7 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
         
         textField.delegate = self
         tableView.delegate = self
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         
         tableView.register(UINib(nibName: "StationCell", bundle: nil), forCellReuseIdentifier: "cell")
     
@@ -64,6 +66,8 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detail" {
             // Setup new view controller
+            let controller = segue.destination as! AlertViewController
+            controller.selectedStation = selectedStation!
         }
     }
     
@@ -92,6 +96,8 @@ extension SetupViewController: UITableViewDataSource {
 extension SetupViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        selectedStation = autoComplete[indexPath.row]
         
         performSegue(withIdentifier: "detail", sender: self)
     }

@@ -14,19 +14,22 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
     }
     
-    
-    
     var sound = ["Chimes","Classic","Magic"]
-    var distance = ["2km","5km"]
-    
-   
-   
+    var distance = [2,5]
+    var selectedStation: Station?
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "startAlarm" {
+            let controller = segue.destination as! MapViewController
+            controller.alarm = sound[musicPickerView.selectedRow(inComponent: 0)]
+            controller.destination = selectedStation!.coordinates
+            controller.distanceFrom = distance[distancePickerView.selectedRow(inComponent: 0)]
+        }
+    }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         var countrows : Int = sound.count
@@ -38,19 +41,36 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         return countrows
     }
     
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var label: UILabel
+        if let view = view as? UILabel { label = view }
+        else { label = UILabel() }
+        
+        label.textColor = UIColor.white
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 23, weight: UIFontWeightLight)
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.5
+        
+        if pickerView == musicPickerView {
+            let titleRow = sound[row]
+            label.text = titleRow
+        } else if pickerView == distancePickerView {
+            let titleRow = distance[row]
+            label.text = "\(titleRow)km"
+        }
+        
+        return label
+    }
     
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == musicPickerView {
-            
             let titleRow = sound[row]
             return titleRow
-            
-        }
-            
-            else if pickerView == distancePickerView{
+        } else if pickerView == distancePickerView {
             let titleRow = distance[row]
-            return titleRow
+            return "\(titleRow)km"
         }
         
         return ""
@@ -70,7 +90,7 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //print(StationManager.shared.chosenStation?.name)
+        
         
     }
     

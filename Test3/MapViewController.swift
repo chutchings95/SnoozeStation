@@ -20,6 +20,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     let manager = CLLocationManager()
     
+    var alarm: String?
+    var distanceFrom: Int?
+    
     var destination: CLLocation?
     
     
@@ -37,14 +40,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         mapView.setRegion(region, animated: true)
         
-        print(location.speed)
-        print(location.coordinate)
-        print(location.timestamp)
-    
-        
         guard destination != nil else { return }
         
-        if location.distance(from: destination!) < 100 {
+        print("coords")
+        print(location.coordinate)
+        print(destination!.coordinate)
+        
+        let distanceFromDestination = location.distance(from: destination!)
+        
+        distanceLabel.text = String(format: "%.2f km", ceil(Double(distanceFromDestination/1000)*100)/100)
+        
+        print(distanceFromDestination)
+        
+        if distanceFromDestination < Double(distanceFrom! * 1000) {
             print("arrived")
             showAlert()
         }
@@ -61,7 +69,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         mapView.setUserTrackingMode(.follow, animated: true)
         
@@ -90,14 +97,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         if !showingAlert {
             showingAlert = true
-            let refreshAlert = UIAlertController(title: "Stop Snoozing!", message: "You Are Nearly At Your Destination", preferredStyle: UIAlertControllerStyle.alert)
+            let Alert = UIAlertController(title: "Stop Snoozing!", message: "You Are Nearly At Your Destination", preferredStyle: UIAlertControllerStyle.alert)
             let action = UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
                 print("Handle Ok logic here")
                 self.showingAlert = false
             })
-            refreshAlert.addAction(action)
+            Alert.addAction(action)
             
-            present(refreshAlert, animated: true, completion: nil)
+            present(Alert, animated: true, completion: nil)
         }
     }
 
