@@ -32,7 +32,7 @@ class StationManager {
     
     
     func loadStations(completionHandler:@escaping (Bool) -> ()) {
-        Alamofire.request("https://raw.githubusercontent.com/chutchings95/SnoozeStation/master/Test3/nearest.json?token=AJgWbnHqlfbaF1M4Q26vu65Q3hX02K1aks5ZMAFbwA%3D%3D").response { response in
+        Alamofire.request("https://raw.githubusercontent.com/chutchings95/SnoozeStation/master/Test3/nearest.json?").response { response in
             
             guard let data = response.data else {
                 completionHandler(false)
