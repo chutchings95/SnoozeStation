@@ -148,7 +148,9 @@
                             <constraint firstItem="rYP-b8-Jzj" firstAttribute="top" secondItem="URi-5f-hDR" secondAttribute="bottom" constant="75" id="yZi-fZ-jRx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Favourite Stations" id="5oz-Yw-E39"/>
+                    <navigationItem key="navigationItem" title="Favourite Stations" id="5oz-Yw-E39">
+                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="OB6-OI-bk3"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="rYP-b8-Jzj" id="g6L-fK-eUa"/>
                         <segue destination="3mE-c5-iol" kind="show" identifier="detail" id="peu-Ea-dCG"/>
