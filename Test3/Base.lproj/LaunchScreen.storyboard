@@ -26,15 +26,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NewLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Dco-E4-KLc">
-                                <rect key="frame" x="0.0" y="172" width="375" height="323"/>
+                                <rect key="frame" x="16" y="177" width="343" height="312"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.99959530196281099" green="0.97950060124067695" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Dco-E4-KLc" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="9g4-ze-8gZ"/>
+                            <constraint firstItem="Dco-E4-KLc" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="16" id="9g4-ze-8gZ"/>
                             <constraint firstItem="Dco-E4-KLc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="IuS-hv-gn2"/>
-                            <constraint firstItem="Dco-E4-KLc" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="152" id="aHj-hs-Cfs"/>
-                            <constraint firstAttribute="trailing" secondItem="Dco-E4-KLc" secondAttribute="trailing" id="xhI-9H-e77"/>
+                            <constraint firstItem="Dco-E4-KLc" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="157" id="aHj-hs-Cfs"/>
+                            <constraint firstAttribute="trailing" secondItem="Dco-E4-KLc" secondAttribute="trailing" constant="16" id="xhI-9H-e77"/>
                         </constraints>
                     </view>
                 </viewController>
