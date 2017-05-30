@@ -49,7 +49,22 @@ class FavouritesViewController: UIViewController {
         }
     }
     
-}
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath:                              IndexPath) {
+        
+            if (editingStyle == .delete) {
+            
+            favouriteStations.remove(at: indexPath.item)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+        }
+
+    }
+
 
 extension FavouritesViewController: UITableViewDelegate {
     
@@ -73,6 +88,8 @@ extension FavouritesViewController: UITableViewDataSource {
         
         return cell
         
+        
+        
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -82,3 +99,4 @@ extension FavouritesViewController: UITableViewDataSource {
         return favouriteStations.count
     }
 }
+
