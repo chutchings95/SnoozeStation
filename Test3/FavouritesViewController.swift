@@ -2,20 +2,19 @@ import UIKit
 
 class FavouritesViewController: UIViewController {
     
+
     
     @IBOutlet var tableView: UITableView!
     
     var stationsLoaded: Bool = false
     var selectedStation: Station?
     var favouriteStations = [Station]()
-
-    @IBAction func favouritesBackButton(_ sender: Any) {
-        
-    }
+    var refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
+        
         tableView.delegate = self
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         
@@ -25,7 +24,11 @@ class FavouritesViewController: UIViewController {
             self.getFavouriteStations()
             self.tableView.reloadData()
         }
+    
+        
     }
+    
+    
     
     func getFavouriteStations() {
         
@@ -99,4 +102,5 @@ extension FavouritesViewController: UITableViewDataSource {
         return favouriteStations.count
     }
 }
+
 
