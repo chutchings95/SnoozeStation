@@ -131,11 +131,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Favourite Stations" id="5oz-Yw-E39">
-                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="HGb-dT-t5P">
-                            <connections>
-                                <action selector="back:" destination="GyT-gp-pV2" id="7oe-DS-fgl"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="HGb-dT-t5P"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="rYP-b8-Jzj" id="g6L-fK-eUa"/>
