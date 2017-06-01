@@ -15,7 +15,7 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     var sound = ["Chimes","Classic","Magic"]
-    var distance = [2,5]
+    var distance = [2,5,10]
     var selectedStation: Station?
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -57,7 +57,7 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             label.text = titleRow
         } else if pickerView == distancePickerView {
             let titleRow = distance[row]
-            label.text = "\(titleRow)km"
+            label.text = "\(titleRow) km"
         }
         
         return label

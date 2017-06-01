@@ -16,15 +16,14 @@ class StationCell: UITableViewCell {
             favButton.isUserInteractionEnabled = false
         }
         if StationManager.shared.isFavourite(station) {
-            titleLable.alpha = 1.0
-            // Set image to Filled In
+          // Set image to Filled In
              favButton.setImage(#imageLiteral(resourceName: "RedFilledHeart"), for: .normal)
         } else {
-            titleLable.alpha = 1.0
             // Set image to Outline
              favButton.setImage(#imageLiteral(resourceName: "OutlineHeart"), for: .normal)
         }
     }
+    
     
     @IBAction func fav(_ sender: Any) {
         StationManager.shared.toggleFavourite(station)

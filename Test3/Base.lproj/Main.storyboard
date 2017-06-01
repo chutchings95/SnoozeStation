@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QaL-7t-T6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-784.79999999999995" y="159.67016491754123"/>
+            <point key="canvasLocation" x="-1228" y="548"/>
         </scene>
         <!--Favourite Stations-->
         <scene sceneID="CBb-eS-NmS">
@@ -137,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GyT-gp-pV2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1201" y="1004"/>
+            <point key="canvasLocation" x="1201" y="928"/>
         </scene>
         <!--Customise Alert-->
         <scene sceneID="fiy-bo-kEh">
@@ -148,14 +148,14 @@
                         <viewControllerLayoutGuide type="bottom" id="hi1-Ke-Iia"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9fd-Z8-Pbi">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient-0" translatesAutoresizingMaskIntoConstraints="NO" id="IeG-AC-aZR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRt-B6-Zus" customClass="BounceButton" customModule="Test3" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="464" width="375" height="47"/>
+                                <rect key="frame" x="0.0" y="528" width="375" height="47"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="29"/>
                                 <state key="normal" title="Set Alarm">
                                     <color key="titleColor" red="0.9872928084" green="1" blue="0.99228653680000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -166,7 +166,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABs-mg-5Nq">
-                                <rect key="frame" x="16" y="223" width="82" height="21"/>
+                                <rect key="frame" x="16" y="287" width="82" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="U89-PM-Kuw"/>
                                     <constraint firstAttribute="width" constant="82" id="nIf-GX-cza"/>
@@ -176,7 +176,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9E-ee-oqQ">
-                                <rect key="frame" x="16" y="105" width="93" height="21"/>
+                                <rect key="frame" x="16" y="169" width="93" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="93" id="Gux-RT-aUL"/>
                                     <constraint firstAttribute="height" constant="21" id="g1G-nH-oBL"/>
@@ -186,7 +186,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pay-YL-c9j">
-                                <rect key="frame" x="227" y="87" width="140" height="77"/>
+                                <rect key="frame" x="227" y="151" width="140" height="77"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="lFh-V6-X20"/>
@@ -198,7 +198,7 @@
                                 </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjf-4N-AZQ">
-                                <rect key="frame" x="219" y="191" width="156" height="85"/>
+                                <rect key="frame" x="219" y="255" width="156" height="85"/>
                                 <connections>
                                     <outlet property="dataSource" destination="3mE-c5-iol" id="3U2-na-iXM"/>
                                     <outlet property="delegate" destination="3mE-c5-iol" id="o2l-Tt-rFk"/>
@@ -232,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H0j-xG-gMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2217" y="550"/>
+            <point key="canvasLocation" x="2695" y="548"/>
         </scene>
         <!--Search for Station-->
         <scene sceneID="bWn-ny-AvA">
@@ -326,17 +326,17 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient-0" translatesAutoresizingMaskIntoConstraints="NO" id="a3r-Ek-DaI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="89S-NL-hvb">
-                                <rect key="frame" x="0.0" y="201" width="375" height="402"/>
+                                <rect key="frame" x="0.0" y="265" width="375" height="402"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPj-k1-hPe" customClass="BounceButton" customModule="Test3" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="163" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="227" width="375" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="XcK-dz-wfo"/>
                                 </constraints>
@@ -349,7 +349,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Are Currently" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKc-5X-6F6">
-                                <rect key="frame" x="40" y="20" width="295" height="38"/>
+                                <rect key="frame" x="40" y="84" width="295" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="exq-8Y-jkf"/>
                                 </constraints>
@@ -358,13 +358,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From Your Station" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0p9-R0-WeZ">
-                                <rect key="frame" x="113" y="114" width="150" height="23"/>
+                                <rect key="frame" x="113" y="178" width="150" height="23"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHN-eu-eBy">
-                                <rect key="frame" x="0.0" y="66" width="375" height="31"/>
+                                <rect key="frame" x="0.0" y="130" width="375" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="lWo-7L-R4d"/>
                                 </constraints>
@@ -403,7 +403,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3180" y="549"/>
+            <point key="canvasLocation" x="3689" y="549"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7N5-Gw-PCR">
@@ -451,7 +451,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4v-PC-Sbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="169" y="1003"/>
+            <point key="canvasLocation" x="169" y="928"/>
         </scene>
     </scenes>
     <resources>
@@ -459,6 +459,6 @@
         <image name="line" width="1890" height="1417"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0yq-t9-6MJ"/>
+        <segue reference="peu-Ea-dCG"/>
     </inferredMetricsTieBreakers>
 </document>

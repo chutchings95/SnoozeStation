@@ -93,14 +93,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         
         
-        
-        
         if !showingAlert {
             showingAlert = true
             let Alert = UIAlertController(title: "Stop Snoozing!", message: "You Are Nearly At Your Destination", preferredStyle: UIAlertControllerStyle.alert)
             let action = UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
                 print("Handle Ok logic here")
                 self.showingAlert = false
+        
             })
             Alert.addAction(action)
             

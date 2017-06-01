@@ -16,7 +16,7 @@ class FavouritesViewController: UIViewController {
     
         
         tableView.delegate = self
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "<", style: .plain, target: self, action: nil)
         
         tableView.register(UINib(nibName: "StationCell", bundle: nil), forCellReuseIdentifier: "cell")
         
@@ -64,6 +64,7 @@ class FavouritesViewController: UIViewController {
             favouriteStations.remove(at: indexPath.item)
             tableView.deleteRows(at: [indexPath], with: .automatic)
             }
+        
         }
 
     }

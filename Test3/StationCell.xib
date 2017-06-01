@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,22 +19,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N56-tk-CSZ">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N56-tk-CSZ">
                         <rect key="frame" x="321" y="23" width="46" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <state key="normal" title="Button"/>
                         <connections>
                             <action selector="fav:" destination="WE9-jK-lQT" eventType="touchUpInside" id="vXC-Nc-cOd"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDh-Sk-N6J">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDh-Sk-N6J">
                         <rect key="frame" x="8" y="28" width="287" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="xDh-Sk-N6J" firstAttribute="centerY" secondItem="mV0-FP-367" secondAttribute="centerY" constant="1" id="4En-OJ-ANJ"/>
+                    <constraint firstItem="xDh-Sk-N6J" firstAttribute="top" secondItem="mV0-FP-367" secondAttribute="topMargin" constant="20" id="4So-jP-BkK"/>
+                    <constraint firstItem="N56-tk-CSZ" firstAttribute="leading" secondItem="xDh-Sk-N6J" secondAttribute="trailing" constant="26" id="FQm-XY-u1c"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="xDh-Sk-N6J" secondAttribute="leading" id="df5-2M-gjq"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="N56-tk-CSZ" secondAttribute="bottom" constant="14" id="ghs-p3-l9f"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xDh-Sk-N6J" secondAttribute="bottom" constant="18" id="j6J-B7-6H9"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="N56-tk-CSZ" secondAttribute="trailing" id="q39-eu-Nn0"/>
+                    <constraint firstItem="xDh-Sk-N6J" firstAttribute="centerX" secondItem="mV0-FP-367" secondAttribute="centerX" constant="-36" id="wwg-Df-dZf"/>
+                    <constraint firstItem="N56-tk-CSZ" firstAttribute="top" secondItem="mV0-FP-367" secondAttribute="topMargin" constant="15" id="xFN-Os-D6t"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="favButton" destination="N56-tk-CSZ" id="W62-pJ-GZh"/>
