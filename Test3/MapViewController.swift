@@ -14,11 +14,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         let alert = UIAlertController(title: "Stop Alarm", message: "Are You Sure You Want To Stop Your Alarm?", preferredStyle: UIAlertControllerStyle.alert)
         
-            alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.destructive, handler: { _ in
+            self.dismiss(animated: true, completion: nil)
+        }))
             alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
-            }
-    
+    }
     
     
     @IBOutlet var mapView: MKMapView!
@@ -41,31 +42,24 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     {
         let location = locations[0]
         
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+        let span = MKCoordinateSpanMake(0.01, 0.01)
         
         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
         
-        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
+        let region = MKCoordinateRegionMake(myLocation, span)
         
         mapView.setRegion(region, animated: true)
         
         guard destination != nil else { return }
         
-        
-        print(location.coordinate)
-        print(destination!.coordinate)
-        
         let distanceFromDestination = location.distance(from: destination!)
         
         distanceLabel.text = String(format: "%.2f km", ceil(Double(distanceFromDestination/1000)*100)/100)
         
-        print(distanceFromDestination)
         
         if distanceFromDestination < Double(distanceFrom! * 1000) {
             print("arrived")
             showAlert()
-            
-            
         }
         
         

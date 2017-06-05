@@ -48,6 +48,7 @@ class StationManager {
         }
     }
     
+    
     func toggleFavourite(_ station: Station) {
         
         
@@ -63,6 +64,8 @@ class StationManager {
     func isFavourite(_ station: Station) -> Bool {
         return favourites.contains(station.code) ? true : false
     }
+    
+    
     
     
 }

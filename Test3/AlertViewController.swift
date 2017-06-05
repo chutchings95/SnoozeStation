@@ -12,6 +12,7 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     @IBAction func setAlarmButton(_ sender: Any) {
     }
+    
     @IBAction func alertBackButton(_ sender: Any) {
         
     }
@@ -79,6 +80,11 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
 
+    @IBAction func setAlarm(_ sender: Any) {
+        
+        AlarmManager.shared.setAlarm(for: selectedStation)
+        
+    }
     
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

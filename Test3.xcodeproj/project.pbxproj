@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A0E89C91EDC351000A96CD3 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0E89C81EDC351000A96CD3 /* NavigationController.swift */; };
+		1A491D291EE55FA5002AC536 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A491D281EE55FA5002AC536 /* Alarm.swift */; };
+		1A491D2B1EE5640A002AC536 /* AlarmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A491D2A1EE5640A002AC536 /* AlarmManager.swift */; };
 		1A4D7D321ECC729100D707D8 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D7D311ECC729000D707D8 /* StartViewController.swift */; };
 		1A4D7D341ECC753700D707D8 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D7D331ECC753700D707D8 /* FavouritesViewController.swift */; };
 		1A4D7D361ECC8EFE00D707D8 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D7D351ECC8EFE00D707D8 /* AlertViewController.swift */; };
@@ -57,6 +59,8 @@
 /* Begin PBXFileReference section */
 		06610F4235E9A5857BC8B1E8 /* Pods-Test3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test3.release.xcconfig"; path = "Pods/Target Support Files/Pods-Test3/Pods-Test3.release.xcconfig"; sourceTree = "<group>"; };
 		1A0E89C81EDC351000A96CD3 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		1A491D281EE55FA5002AC536 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		1A491D2A1EE5640A002AC536 /* AlarmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmManager.swift; sourceTree = "<group>"; };
 		1A4D7D311ECC729000D707D8 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		1A4D7D331ECC753700D707D8 /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		1A4D7D351ECC8EFE00D707D8 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 			children = (
 				1A94F2BC1E800CFD0025E249 /* AppDelegate.swift */,
 				1A90E1021EC9008500934EF4 /* StationManager.swift */,
+				1A491D281EE55FA5002AC536 /* Alarm.swift */,
+				1A491D2A1EE5640A002AC536 /* AlarmManager.swift */,
 				1A4D7D311ECC729000D707D8 /* StartViewController.swift */,
 				1A4D7D331ECC753700D707D8 /* FavouritesViewController.swift */,
 				1AF8BA061E8D6A0600F7C943 /* SetupViewController.swift */,
@@ -542,7 +548,9 @@
 				1A4D7D321ECC729100D707D8 /* StartViewController.swift in Sources */,
 				1AF8BA0B1E8D6F2C00F7C943 /* Station.swift in Sources */,
 				1A4D7D8C1EDB1A4E00D707D8 /* StationCell.swift in Sources */,
+				1A491D2B1EE5640A002AC536 /* AlarmManager.swift in Sources */,
 				1A4D7D361ECC8EFE00D707D8 /* AlertViewController.swift in Sources */,
+				1A491D291EE55FA5002AC536 /* Alarm.swift in Sources */,
 				1A90E1031EC9008500934EF4 /* StationManager.swift in Sources */,
 				1A94F2C51E800CFD0025E249 /* Test3.xcdatamodeld in Sources */,
 				1A94F2BF1E800CFD0025E249 /* MapViewController.swift in Sources */,

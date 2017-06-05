@@ -128,7 +128,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Favourite Stations" id="5oz-Yw-E39">
-                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="HGb-dT-t5P"/>
+                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="HGb-dT-t5P">
+                            <connections>
+                                <action selector="back:" destination="da1-6a-MNh" id="oMO-we-TEQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="rYP-b8-Jzj" id="g6L-fK-eUa"/>
@@ -161,8 +165,8 @@
                                     <color key="titleColor" red="0.9872928084" green="1" blue="0.99228653680000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="setAlarm:" destination="3mE-c5-iol" eventType="touchUpInside" id="GoX-0c-pFq"/>
                                     <action selector="setAlarmButton:" destination="3mE-c5-iol" eventType="touchUpInside" id="RZA-l0-1IW"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="startAlarm" id="Hao-Hf-NmT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABs-mg-5Nq">
@@ -414,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3689" y="549"/>
+            <point key="canvasLocation" x="3986" y="547"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7N5-Gw-PCR">

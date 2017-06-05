@@ -11,6 +11,11 @@ class FavouritesViewController: UIViewController {
     var favouriteStations = [Station]()
     var refreshControl = UIRefreshControl()
     
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -59,11 +64,12 @@ class FavouritesViewController: UIViewController {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath:                              IndexPath) {
         
-            if (editingStyle == .delete) {
+            if editingStyle == .delete {
             
-            favouriteStations.remove(at: indexPath.item)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-                
+                StationManager.shared.toggleFavourite(favouriteStations[indexPath.row])
+                favouriteStations.remove(at: indexPath.item)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+
             }
         
        
@@ -106,5 +112,3 @@ extension FavouritesViewController: UITableViewDataSource {
         return favouriteStations.count
     }
 }
-
-

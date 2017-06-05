@@ -85,7 +85,7 @@ extension SetupViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! StationCell
         let station = autoComplete[indexPath.row]
         cell.station = station
-        
+        cell.delegate = self
         return cell
         }
     
@@ -93,15 +93,20 @@ extension SetupViewController: UITableViewDataSource {
 
 
 
-    extension SetupViewController: UITableViewDelegate {
+extension SetupViewController: UITableViewDelegate {
     
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
         selectedStation = autoComplete[indexPath.row]
         
         performSegue(withIdentifier: "detail", sender: self)
-        }
-     }
+    }
+}
 
 
-
+extension SetupViewController: StationCellDelegate {
+    func update() {
+        tableView.reloadData()
+    }
+}

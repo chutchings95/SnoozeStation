@@ -1,9 +1,14 @@
 import UIKit
 
+protocol StationCellDelegate {
+    func update()
+}
+
 class StationCell: UITableViewCell {
     
     var station: Station!
     var hideFavouriteButton = false
+    var delegate: StationCellDelegate?
     
     @IBOutlet var titleLable: UILabel!
     @IBOutlet var favButton: UIButton!
@@ -29,6 +34,7 @@ class StationCell: UITableViewCell {
     
     @IBAction func fav(_ sender: Any) {
         StationManager.shared.toggleFavourite(station)
+        delegate?.update()
     }
 
 }
