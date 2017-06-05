@@ -4,6 +4,8 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     
     
+    @IBAction func previewButton(_ sender: Any) {
+    }
 
     @IBOutlet weak var musicPickerView: UIPickerView!
     @IBOutlet var distancePickerView: UIPickerView!
