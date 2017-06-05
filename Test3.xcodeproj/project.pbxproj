@@ -61,6 +61,7 @@
 		1A0E89C81EDC351000A96CD3 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		1A491D281EE55FA5002AC536 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		1A491D2A1EE5640A002AC536 /* AlarmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmManager.swift; sourceTree = "<group>"; };
+		1A491D2C1EE5F5D2002AC536 /* Poole Station.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Poole Station.gpx"; sourceTree = "<group>"; };
 		1A4D7D311ECC729000D707D8 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		1A4D7D331ECC753700D707D8 /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		1A4D7D351ECC8EFE00D707D8 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +190,7 @@
 				1A4D7D351ECC8EFE00D707D8 /* AlertViewController.swift */,
 				1A94F2BE1E800CFD0025E249 /* MapViewController.swift */,
 				1A94F2F21E80282C0025E249 /* Stations.gpx */,
+				1A491D2C1EE5F5D2002AC536 /* Poole Station.gpx */,
 				1A94F2C01E800CFD0025E249 /* Main.storyboard */,
 				1A4D7D8F1EDB362F00D707D8 /* StationCell.xib */,
 				1A94F2C61E800CFD0025E249 /* Assets.xcassets */,

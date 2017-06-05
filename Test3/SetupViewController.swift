@@ -27,7 +27,6 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
     
         StationManager.shared.loadStations { success in
             self.tableView.reloadData()
-            print(success)
         }
         
     }

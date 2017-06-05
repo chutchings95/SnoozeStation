@@ -15,7 +15,7 @@ class Alarm {
         name = station.name
         coordinates = CLLocationCoordinate2DMake(station.coordinates.coordinate.latitude, station.coordinates.coordinate.longitude)
         self.sound = sound
-        self.distance = distance
+        self.distance = distance*1000
         location = station.coordinates
     }
     

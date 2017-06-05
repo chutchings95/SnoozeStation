@@ -45,12 +45,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         //loop through all the alarms, and trigger one if needed
         
         for alarm in AlarmManager.shared.alarms {
-            
-            if alarm.distance < userLocation.distance(from: alarm.location) && !alarm.triggered {
+            print(userLocation.distance(from: alarm.location))
+            if userLocation.distance(from: alarm.location) < alarm.distance && !alarm.triggered {
+                print(alarm.distance)
                 alarm.triggered = true
-                print("Alert for \(alarm.name)")
-                showNotification()
-                showAlert()
+                showNotification(for: alarm)
+                
             }
             
         }
@@ -107,10 +107,22 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             let annotation = MKPointAnnotation()
             annotation.coordinate = alarm.coordinates
             annotation.title = alarm.name
-            annotation.subtitle = alarm.sound + " \(alarm.distance)"
+            annotation.subtitle = alarm.sound + " \(alarm.distance/1000) km"
             mapView.addAnnotation(annotation)
+            
+            
+        }
+        
+    }
+    
+    func removeAnnotation() {
+        for annotation in self.mapView.annotations {
+            self.mapView.removeAnnotation(annotation)
+            mapView.showsUserLocation = true
         }
     }
+    
+    
     
     // alert
     
@@ -143,7 +155,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
         // local notification
     
-        func initNotificationSetupCheck() {
+    func initNotificationSetupCheck() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert])
         { (success, error) in
             if success {
@@ -154,14 +166,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    func showNotification() {
+    func showNotification(for alarm: Alarm) {
         let notification = UNMutableNotificationContent()
         notification.title = "Stop Snoozing!"
-        notification.body = "You Are Nearly At Your Destination"
+        notification.body = "You \(alarm.distance/1000) kilometers from \(alarm.name)."
         AudioServicesPlaySystemSound(SystemSoundID(1304))
         AudioServicesPlaySystemSound(SystemSoundID(4095))
         
-        let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
         let request = UNNotificationRequest(identifier: "notification1", content: notification, trigger: notificationTrigger)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)

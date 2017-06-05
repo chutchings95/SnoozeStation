@@ -14,11 +14,6 @@ class Station {
         
         let coordinateArray = json["latlong"]["coordinates"].arrayValue
         
-        if (code == "BMH") {
-            print(coordinateArray)
-            print(coordinateArray[0].floatValue)
-            print(coordinateArray[1].floatValue)
-        }
         coordinates = CLLocation(latitude: CLLocationDegrees(coordinateArray[1].floatValue), longitude: CLLocationDegrees(coordinateArray[0].floatValue))
     }
     

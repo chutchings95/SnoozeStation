@@ -57,7 +57,6 @@ class StationManager {
         } else {
             favourites.append(station.code)
         }
-        print(favourites)
         UserDefaults.standard.setValue(favourites, forKey: "Favourites")
     }
     
