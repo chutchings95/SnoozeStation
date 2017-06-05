@@ -26,9 +26,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet var distanceLabel: UILabel!
 
-    var showingAlert = false 
+    var showingAlert = false
     
-    let manager = CLLocationManager()
+    let locationManager = CLLocationManager()
     
     var alarm: String?
     var distanceFrom: Int?
@@ -40,6 +40,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     
     {
+        
         let location = locations[0]
         
         let span = MKCoordinateSpanMake(0.01, 0.01)
@@ -76,15 +77,22 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         
         mapView.setUserTrackingMode(.follow, animated: true)
+        locationManager.requestAlwaysAuthorization()
+        locationManager.delegate = self
+        locationManager.allowsBackgroundLocationUpdates = true
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
         
-        manager.delegate = self
-        manager.allowsBackgroundLocationUpdates = true
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestAlwaysAuthorization()
-        manager.startUpdatingLocation()
-        
-            
+        //loop through all your alarms and put them on the map.
+        for alarm in AlarmManager.shared.alarms {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = alarm.coordinates
+            annotation.title = alarm.name
+            annotation.subtitle = alarm.sound + " \(alarm.distance/1000)"
+            mapView.addAnnotation(annotation)
         }
+            
+    }
     
     
     func showAlert() {

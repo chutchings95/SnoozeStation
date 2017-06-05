@@ -5,13 +5,16 @@ import CoreLocation
 class Alarm {
     
     var name: String
-    var coordinates: CLLocation
+    var coordinates: CLLocationCoordinate2D
     var sound: String
+    var distance: Int
+    var triggered = false
    
-    init(station: Station, sound: String) {
+    init(station: Station, sound: String, distance: Int) {
         name = station.name
-        coordinates = station.coordinates
+        coordinates = CLLocationCoordinate2DMake(station.coordinates.coordinate.latitude, station.coordinates.coordinate.longitude)
         self.sound = sound
+        self.distance = distance
     }
     
 }

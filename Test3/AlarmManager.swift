@@ -9,16 +9,10 @@ class AlarmManager {
     
     private init () { }
     
-
-    
-    
-    func setAlarm(for station: Station, withSound: String) {
-        let newAlarm = Alarm(station: station, sound: withSound)
+    func setAlarm(for station: Station, withSound: String, atDistance: Int) {
+        let newAlarm = Alarm(station: station, sound: withSound, distance: atDistance)
         AlarmManager.shared.alarms.append(newAlarm)
     }
     
-    
-    
-    
-    
+
 }

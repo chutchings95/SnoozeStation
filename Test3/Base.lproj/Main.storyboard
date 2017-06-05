@@ -166,7 +166,6 @@
                                 </state>
                                 <connections>
                                     <action selector="setAlarm:" destination="3mE-c5-iol" eventType="touchUpInside" id="GoX-0c-pFq"/>
-                                    <action selector="setAlarmButton:" destination="3mE-c5-iol" eventType="touchUpInside" id="RZA-l0-1IW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABs-mg-5Nq">
@@ -208,6 +207,14 @@
                                     <outlet property="delegate" destination="3mE-c5-iol" id="o2l-Tt-rFk"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lag-ck-OIb">
+                                <rect key="frame" x="205" y="445" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="DDo-vf-fii"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ABs-mg-5Nq" firstAttribute="centerY" secondItem="yjf-4N-AZQ" secondAttribute="centerY" id="0CM-PJ-jgW"/>
@@ -407,7 +414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3986" y="547"/>
+            <point key="canvasLocation" x="3956" y="399"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7N5-Gw-PCR">

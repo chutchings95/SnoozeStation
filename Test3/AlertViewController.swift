@@ -6,13 +6,6 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var musicPickerView: UIPickerView!
     @IBOutlet var distancePickerView: UIPickerView!
     
-    @IBAction func setAlarmButton(_ sender: Any) {
-    }
-    
-    @IBAction func alertBackButton(_ sender: Any) {
-        
-    }
-    
     var sound = ["Chimes","Classic","Magic"]
     var distance = [2,5,10]
     var selectedStation: Station!
@@ -78,9 +71,9 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
 
     @IBAction func setAlarm(_ sender: Any) {
         
-        AlarmManager.shared.setAlarm(for: selectedStation, withSound: "Chimes, Classic, Magic")
-        
+        AlarmManager.shared.setAlarm(for: selectedStation, withSound: "", atDistance: )
     }
+    
     
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

@@ -1,11 +1,3 @@
-//
-//  Station.swift
-//  Test3
-//
-//  Created by Chloe Hutchings on 30/03/2017.
-//  Copyright © 2017 Chloe Hutchings. All rights reserved.
-//
-
 import SwiftyJSON
 import CoreLocation
 
