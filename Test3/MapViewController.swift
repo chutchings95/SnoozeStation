@@ -12,7 +12,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func cancelAlertButton(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Stop Alarm?", message: "Are You Sure You Want To Stop Your Alarm?", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Stop Alarm", message: "Are You Sure You Want To Stop Your Alarm?", preferredStyle: UIAlertControllerStyle.alert)
         
             alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: nil))
             alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.cancel, handler: nil))
