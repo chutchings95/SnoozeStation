@@ -49,6 +49,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             if alarm.distance < userLocation.distance(from: alarm.location) && !alarm.triggered {
                 alarm.triggered = true
                 print("Alert for \(alarm.name)")
+                showNotification()
             }
             
         }
@@ -148,6 +149,17 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    func showNotification() {
+        let notification = UNMutableNotificationContent()
+        notification.title = "Stop Snoozing!"
+        notification.body = "You Are Nearly At Your Destination"
+        
+        let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request = UNNotificationRequest(identifier: "notification1", content: notification, trigger: notificationTrigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        
+    }
     
 }
 
