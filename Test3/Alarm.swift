@@ -1,23 +1,17 @@
 import Foundation
+import CoreLocation
 
 
 class Alarm {
     
-    
-    
-    station coordinate
-    station name
-    
+    var name: String
+    var coordinates: CLLocation
+    var sound: String
    
-    
-    func playSound() {
-        
-        
+    init(station: Station, sound: String) {
+        name = station.name
+        coordinates = station.coordinates
+        self.sound = sound
     }
     
-    
-    func dismissAlarm() {
-        
-        
-    }
 }

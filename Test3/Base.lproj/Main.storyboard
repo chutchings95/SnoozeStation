@@ -208,17 +208,6 @@
                                     <outlet property="delegate" destination="3mE-c5-iol" id="o2l-Tt-rFk"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8H-zz-nur">
-                                <rect key="frame" x="233" y="348" width="129" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
-                                <state key="normal" title="Preview Sound">
-                                    <color key="titleColor" red="0.97915781911213551" green="1" blue="0.95794993166834674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="previewButton:" destination="3mE-c5-iol" eventType="touchUpInside" id="N73-Qq-Xke"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ABs-mg-5Nq" firstAttribute="centerY" secondItem="yjf-4N-AZQ" secondAttribute="centerY" id="0CM-PJ-jgW"/>

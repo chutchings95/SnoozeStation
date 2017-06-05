@@ -2,10 +2,6 @@ import UIKit
 
 class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    
-    
-    @IBAction func previewButton(_ sender: Any) {
-    }
 
     @IBOutlet weak var musicPickerView: UIPickerView!
     @IBOutlet var distancePickerView: UIPickerView!
@@ -19,7 +15,7 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     var sound = ["Chimes","Classic","Magic"]
     var distance = [2,5,10]
-    var selectedStation: Station?
+    var selectedStation: Station!
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -82,7 +78,7 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
 
     @IBAction func setAlarm(_ sender: Any) {
         
-        AlarmManager.shared.setAlarm(for: selectedStation)
+        AlarmManager.shared.setAlarm(for: selectedStation, withSound: "Chimes, Classic, Magic")
         
     }
     
