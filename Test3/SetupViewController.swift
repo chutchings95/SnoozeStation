@@ -68,10 +68,10 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
             // Setup new view controller
             let controller = segue.destination as! AlertViewController
             controller.selectedStation = selectedStation!
+            }
         }
-    }
     
-}
+    }
 
 
 
@@ -87,22 +87,21 @@ extension SetupViewController: UITableViewDataSource {
         cell.station = station
         
         return cell
+        }
+    
     }
+
+
+
+    extension SetupViewController: UITableViewDelegate {
     
-}
-
-
-
-extension SetupViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         selectedStation = autoComplete[indexPath.row]
         
         performSegue(withIdentifier: "detail", sender: self)
-    }
-    
-}
+        }
+     }
 
 
 

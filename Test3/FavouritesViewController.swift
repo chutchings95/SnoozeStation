@@ -24,8 +24,8 @@ class FavouritesViewController: UIViewController {
             self.getFavouriteStations()
             self.tableView.reloadData()
         }
-    
         
+    
     }
     
     
@@ -63,7 +63,10 @@ class FavouritesViewController: UIViewController {
             
             favouriteStations.remove(at: indexPath.item)
             tableView.deleteRows(at: [indexPath], with: .automatic)
+                
             }
+        
+       
         
         }
 

@@ -9,8 +9,17 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func mapBackButton(_ sender: Any) {
     }
+    
     @IBAction func cancelAlertButton(_ sender: Any) {
-    }
+        
+        let alert = UIAlertController(title: "Stop Alarm?", message: "Are You Sure You Want To Stop Your Alarm?", preferredStyle: UIAlertControllerStyle.alert)
+        
+            alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: nil))
+            alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            }
+    
+    
     
     @IBOutlet var mapView: MKMapView!
     
@@ -42,7 +51,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         guard destination != nil else { return }
         
-        print("coords")
+        
         print(location.coordinate)
         print(destination!.coordinate)
         
@@ -55,6 +64,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         if distanceFromDestination < Double(distanceFrom! * 1000) {
             print("arrived")
             showAlert()
+            
+            
         }
         
         

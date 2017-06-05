@@ -70,7 +70,7 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             return titleRow
         } else if pickerView == distancePickerView {
             let titleRow = distance[row]
-            return "\(titleRow)km"
+            return "\(titleRow) km"
         }
         
         return ""

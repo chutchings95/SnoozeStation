@@ -22,6 +22,8 @@ class StationCell: UITableViewCell {
             // Set image to Outline
              favButton.setImage(#imageLiteral(resourceName: "OutlineHeart"), for: .normal)
         }
+        
+    
     }
     
     
