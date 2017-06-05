@@ -50,6 +50,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 alarm.triggered = true
                 print("Alert for \(alarm.name)")
                 showNotification()
+                showAlert()
             }
             
         }
@@ -111,6 +112,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    // alert
     
     func showAlert() {
 
@@ -136,7 +138,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             present(Alert, animated: true, completion: nil)
         }
     }
+    
+    
 
+        // local notification
     
         func initNotificationSetupCheck() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert])
@@ -153,8 +158,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let notification = UNMutableNotificationContent()
         notification.title = "Stop Snoozing!"
         notification.body = "You Are Nearly At Your Destination"
+        AudioServicesPlaySystemSound(SystemSoundID(1304))
+        AudioServicesPlaySystemSound(SystemSoundID(4095))
         
-        let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
         let request = UNNotificationRequest(identifier: "notification1", content: notification, trigger: notificationTrigger)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
