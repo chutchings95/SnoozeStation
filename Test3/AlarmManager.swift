@@ -1,4 +1,6 @@
 import Foundation
+import CoreLocation
+
 
 class AlarmManager {
     
@@ -9,10 +11,21 @@ class AlarmManager {
     
     private init () { }
     
-    func setAlarm(for station: Station, withSound: String, atDistance: Int) {
+    func setAlarm(for station: Station, withSound: String, atDistance: Double) {
         let newAlarm = Alarm(station: station, sound: withSound, distance: atDistance)
         AlarmManager.shared.alarms.append(newAlarm)
     }
+    
+//    func closestAlarm(userLocation: CLLocation) -> Alarm? {
+//        
+//        var closestAlarm = AlarmManager.shared.alarms.first
+//        
+//        for alarm in AlarmManager.shared.alarms {
+//            
+//        }
+//        
+//        return closestAlarm
+//    }
     
 
 }

@@ -3,6 +3,7 @@ import MapKit
 import CoreLocation
 import AVFoundation
 import AudioToolbox
+import UserNotifications
 
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
@@ -31,40 +32,51 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     
     var alarm: String?
-    var distanceFrom: Int?
+    var distanceFrom: Double?
     
     var destination: CLLocation?
     
     
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
-    
-    {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        let location = locations[0]
+        guard let userLocation = locations.last else { return }
         
-        let span = MKCoordinateSpanMake(0.01, 0.01)
+        //loop through all the alarms, and trigger one if needed
         
-        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        
-        let region = MKCoordinateRegionMake(myLocation, span)
-        
-        mapView.setRegion(region, animated: true)
-        
-        guard destination != nil else { return }
-        
-        let distanceFromDestination = location.distance(from: destination!)
-        
-        distanceLabel.text = String(format: "%.2f km", ceil(Double(distanceFromDestination/1000)*100)/100)
-        
-        
-        if distanceFromDestination < Double(distanceFrom! * 1000) {
-            print("arrived")
-            showAlert()
+        for alarm in AlarmManager.shared.alarms {
+            
+            if alarm.distance < userLocation.distance(from: alarm.location) && !alarm.triggered {
+                alarm.triggered = true
+                print("Alert for \(alarm.name)")
+            }
+            
         }
         
         
-        self.mapView.showsUserLocation = true
+        
+//        let span = MKCoordinateSpanMake(0.01, 0.01)
+//        
+//        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+//        
+//        let region = MKCoordinateRegionMake(myLocation, span)
+//        
+//        mapView.setRegion(region, animated: true)
+//        
+//        guard destination != nil else { return }
+//        
+//        let distanceFromDestination = location.distance(from: destination!)
+//        
+//        distanceLabel.text = String(format: "%.2f km", ceil(Double(distanceFromDestination/1000)*100)/100)
+//        
+//        
+//        if distanceFromDestination < Double(distanceFrom! * 1000) {
+//            print("arrived")
+//            showAlert()
+//        }
+//        
+//        
+//        self.mapView.showsUserLocation = true
         
     }
     
@@ -83,15 +95,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
         
-        //loop through all your alarms and put them on the map.
+        initNotificationSetupCheck()
+        
+        addAnnotations()
+    }
+    
+    func addAnnotations() {
         for alarm in AlarmManager.shared.alarms {
             let annotation = MKPointAnnotation()
             annotation.coordinate = alarm.coordinates
             annotation.title = alarm.name
-            annotation.subtitle = alarm.sound + " \(alarm.distance/1000)"
+            annotation.subtitle = alarm.sound + " \(alarm.distance)"
             mapView.addAnnotation(annotation)
         }
-            
     }
     
     
@@ -120,6 +136,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 
+    
+        func initNotificationSetupCheck() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert])
+        { (success, error) in
+            if success {
+                print("Permission Granted")
+            } else {
+                print("There was a problem!")
+            }
+        }
+    }
+    
     
 }
 

@@ -7,7 +7,7 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet var distancePickerView: UIPickerView!
     
     var sound = ["Chimes","Classic","Magic"]
-    var distance = [2,5,10]
+    var distance: [Double] = [2,5,10]
     var selectedStation: Station!
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -71,9 +71,11 @@ class AlertViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
 
     @IBAction func setAlarm(_ sender: Any) {
         
-        AlarmManager.shared.setAlarm(for: selectedStation, withSound: "", atDistance: )
-    }
+        let x = sound[musicPickerView.selectedRow(inComponent: 0)]
+        let y = distance[distancePickerView.selectedRow(inComponent: 0)]
     
+        AlarmManager.shared.setAlarm(for: selectedStation, withSound: x, atDistance: y)
+       }
     
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
