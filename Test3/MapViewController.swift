@@ -8,8 +8,7 @@ import UserNotifications
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
-    @IBAction func mapBackButton(_ sender: Any) {
-    }
+   
     
     @IBAction func cancelAlertButton(_ sender: Any) {
         
@@ -60,7 +59,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
 //        let span = MKCoordinateSpanMake(0.01, 0.01)
 //        
-//        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+//        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude,         location.coordinate.longitude)
 //        
 //        let region = MKCoordinateRegionMake(myLocation, span)
 //        
@@ -69,10 +68,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 //        guard destination != nil else { return }
 //     
         
- //       let distanceFromDestination = locations.distance(from: destination!)
-//        
-  //      distanceLabel.text = String(format: "%.2f km", ceil(Double(distanceFromDestination/1000)*100)/100)
-//        
+ //      let distanceFromDestination = userLocation .distance(from: destination!)
+        
+ //      distanceLabel.text = String(format: "%.2f km", ceil(Double(distanceFromDestination/1000)*100)/100)
+//
 //        
 //        if distanceFromDestination < Double(distanceFrom! * 1000) {
 //            print("arrived")
