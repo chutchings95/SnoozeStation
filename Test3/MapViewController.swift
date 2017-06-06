@@ -50,6 +50,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 print(alarm.distance)
                 alarm.triggered = true
                 showNotification(for: alarm)
+                showAlert(for: alarm)
                 
             }
             
@@ -66,10 +67,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 //        mapView.setRegion(region, animated: true)
 //        
 //        guard destination != nil else { return }
+//     
+        
+ //       let distanceFromDestination = locations.distance(from: destination!)
 //        
-//        let distanceFromDestination = location.distance(from: destination!)
-//        
-//        distanceLabel.text = String(format: "%.2f km", ceil(Double(distanceFromDestination/1000)*100)/100)
+  //      distanceLabel.text = String(format: "%.2f km", ceil(Double(distanceFromDestination/1000)*100)/100)
 //        
 //        
 //        if distanceFromDestination < Double(distanceFrom! * 1000) {
@@ -133,7 +135,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     // alert
     
-    func showAlert() {
+    func showAlert(for alarm: Alarm) {
 
         // Alarm sound and vibration
         
@@ -176,7 +178,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     func showNotification(for alarm: Alarm) {
         let notification = UNMutableNotificationContent()
         notification.title = "Stop Snoozing!"
-        notification.body = "You \(alarm.distance/1000) kilometers from \(alarm.name)."
+        notification.body = "You are \(alarm.distance/1000) kilometers from \(alarm.name)."
         AudioServicesPlaySystemSound(SystemSoundID(1304))
         AudioServicesPlaySystemSound(SystemSoundID(4095))
         
