@@ -97,6 +97,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
         
+        mapView.delegate = self
+        
         initNotificationSetupCheck()
         
         addAnnotations()
@@ -115,12 +117,17 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    func removeAnnotation() {
+    
+    func removeAnnotation(with title: String) {
         for annotation in self.mapView.annotations {
-            self.mapView.removeAnnotation(annotation)
-            mapView.showsUserLocation = true
+            guard let annotationTitle = annotation.title else { continue }
+            if annotationTitle == title {
+                self.mapView.removeAnnotation(annotation)
+                AlarmManager.shared.removeAlarm(for: annotationTitle!)
+            }
         }
     }
+    
     
     
     
@@ -181,4 +188,37 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
 }
+
+
+extension MapViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation { return nil }
+        
+        if let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "") {
+            annotationView.annotation = annotation
+            return annotationView
+        } else {
+            let annotationView = MKPinAnnotationView(annotation:annotation, reuseIdentifier:"")
+            annotationView.isEnabled = true
+            annotationView.canShowCallout = true
+            
+            let btn = UIButton(type: .detailDisclosure)
+            annotationView.rightCalloutAccessoryView = btn
+            return annotationView
+        }
+    
+        
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+    
+        removeAnnotation(with: view.annotation!.title!!)
+        
+        
+    }
+    
+    
+}
+
 
